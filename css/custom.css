@@ -1,0 +1,76 @@
+body {
+
+	background-image: url(http://wallpapercave.com/wp/aVMEQR0.jpg);
+	background-size: auto;
+	background-repeat: no-repeat;
+	color: #7B241C;
+	font-family: 'Italianno', cursive;
+}
+h1,
+h2 {
+	font-weight: bold;
+}
+p {
+	font-size: 16px;
+	color: #7B241C;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.jumbotron {
+
+	color: white;
+	text-align: center;
+	background: rgba(95, 1, 1, 0.7);
+}
+.jumbotron p {
+	color: white;
+	font-size: 26px;
+}
+.navbar-inverse {
+	background: #2E2F31;
+	border: 0;
+}
+.navbar-inverse a {
+	font-size: 26px;
+}
+.dropdown-menu {
+	background: #2E2F31;
+	border-radius: 0;
+	border: 0;
+}
+.navbar-inverse .navbar-nav li a {
+	color: #f7f7f7;
+	font-size: 24px;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: #7B241C;
+}
+.navbar-inverse .navbar-nav .dropdown-menu li a:hover {
+	background: #2C463C;
+}
+.dropdown-menu li a {
+	padding: 10px;
+}
+.btn-primary {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+	font-size: 26px;
+}
+.btn-primary:hover {
+	color: #7B241C;
+	background-color: white;
+	border-color: white;
+}
+.glyphicon-large {
+	font-size: 100px;
+}
+.call-to-action {
+	text-align: center;
+}
+.call-to-action p {
+	margin-bottom: 30px;
+	font-family: sans-serif;
+}
