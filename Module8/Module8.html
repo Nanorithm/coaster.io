@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.buttons {
+	width: 100%;
+	padding-left: 10%;
+}
+
+.memberBtn {
+	background-color: #008CBA;
+    color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.infoTable {
+	padding-top: 50px;
+	padding-left: 15%;
+}
+
+.teamMemberInfo {
+	vertical-align: top;
+}
+</style>
+</head>
+<body style="background-color: aliceblue;">
+
+<h1 align="center">Meet the Team!</h1>
+
+<table class="buttons">
+	<tr>
+		<td>
+			<button class="memberBtn" id="1" onclick="getInfoAndPicture(this.id);">Kevin Horne</button>
+		</td>
+		<td>
+			<button class="memberBtn" id="2" onclick="getInfoAndPicture(this.id);">Albert Hong</button>
+		</td>
+		<td>
+			<button class="memberBtn" id="3" onclick="getInfoAndPicture(this.id);">Dylan Ryszka</button>
+		</td>
+		<td>
+			<button class="memberBtn" id="4" onclick="getInfoAndPicture(this.id);">Tyrone Dixon</button>
+		</td>
+		<td>
+			<button class="memberBtn" id="5" onclick="getInfoAndPicture(this.id);">Chas Rivers</button>
+		</td>
+	</tr>
+</table>
+
+<table class="infoTable">
+	<tr>
+		<td>
+			<img id="picture" style="border-radius:10%;"></img>
+		</td>
+		<td class="teamMemberInfo">
+			<span id="here"></span>
+		</td>
+	</tr>
+</table>
+<script>
+
+	function getInfoAndPicture(id) {
+		getInfo(id);
+		getPicture(id);
+	}
+	
+	function getInfo(id) {
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("here").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "Module8a.php?id=" + id, true);
+        xmlhttp.send();
+	}
+	
+	function getPicture(id) {
+		document.getElementById("picture").src = "Module8b.php?id=" + id;
+	}
+
+</script>
+</body>
+</html>
