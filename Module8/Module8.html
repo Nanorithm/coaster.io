@@ -17,11 +17,16 @@
 
 .infoTable {
 	padding-top: 50px;
-	padding-left: 15%;
+	padding-left: 5%;
 }
 
 .teamMemberInfo {
 	vertical-align: top;
+}
+
+#picture {
+	width: 500px;
+	height: 500px;
 }
 </style>
 </head>
@@ -78,9 +83,15 @@
 	}
 	
 	function getPicture(id) {
+		document.getElementById("picture").style.visibility=" visible";
 		document.getElementById("picture").src = "Module8b.php?id=" + id;
 	}
-
+	
+	function hideFrame() {
+		document.getElementById("picture").style.visibility=" hidden";
+	}
+	
+	window.addEventListener( "load", hideFrame, false );
 </script>
 </body>
 </html>
