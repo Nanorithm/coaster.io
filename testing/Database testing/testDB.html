@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+	width: 300px;
+	height: 300px;
+}
+</style>
+</head>
+<body >
+<table class="buttons">
+	<tr>
+		<td>
+			<button class="" id="1" onclick="getInfoAndPicture(this.id);">Old Fashioned</button>
+		</td>
+		<td>
+			<button class="" id="2" onclick="getInfoAndPicture(this.id);">Martinez</button>
+		</td>
+		<td>
+			<button class="" id="3" onclick="getInfoAndPicture(this.id);">Martini</button>
+		</td>
+		<td>
+			<button class="" id="4" onclick="getInfoAndPicture(this.id);">Manhattan</button>
+		</td>
+		<td>
+			<button class="" id="5" onclick="getInfoAndPicture(this.id);">Daiquiri</button>
+		</td>
+	</tr>
+</table>
+
+<table class="">
+	<tr>
+		<td>
+			<img id="picture" style="border-radius:10%;"></img>
+		</td>
+		<td class="teamMemberInfo">
+			<span id="here"></span>
+		</td>
+	</tr>
+</table>
+
+<table class="">
+	<tr>
+		<td>
+			<img id="picture1" style="border-radius:10%;"></img>
+		</td>
+		<td>
+			<img id="picture2" style="border-radius:10%;"></img>
+		</td>
+		<td>
+			<img id="picture3" style="border-radius:10%;"></img>
+		</td>
+	</tr>
+</table>
+<script>
+
+	function getInfoAndPicture(id) {
+		getInfo(id);
+		getPicture(id);
+	}
+	
+	function getInfo(id) {
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("here").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "testDBa.php?id=" + id, true);
+        xmlhttp.send();
+	}
+	
+	function getPicture(id) {
+		var mixedID;
+		var liquorID;
+		var mixerID;
+		var garnishID;
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var string = this.responseText;
+				string=string.split(" ");
+				mixedID=string[0];
+				liquorID=string[1];
+				mixerID=string[2];
+				garnishID=string[3];
+				
+				document.getElementById("picture").src="testDBb.php?id=" + mixedID;
+				document.getElementById("picture1").src="testDBd.php?id=" + liquorID;
+				document.getElementById("picture2").src="testDBe.php?id=" + mixerID;
+				document.getElementById("picture3").src="testDBf.php?id=" + garnishID;
+				document.getElementById("picture").style.visibility=" visible";
+				document.getElementById("picture1").style.visibility=" visible";
+				document.getElementById("picture2").style.visibility=" visible";
+				document.getElementById("picture3").style.visibility=" visible";
+            }
+        };
+        xmlhttp.open("GET", "testDBc.php?id=" + id, true);
+        xmlhttp.send();
+		
+		
+	}
+	
+	function hideFrame() {
+		document.getElementById("picture").style.visibility=" hidden";
+		document.getElementById("picture1").style.visibility=" hidden";
+		document.getElementById("picture2").style.visibility=" hidden";
+		document.getElementById("picture3").style.visibility=" hidden";
+	}
+	
+	window.addEventListener( "load", hideFrame, false );
+</script>
+</body>
+</html>
