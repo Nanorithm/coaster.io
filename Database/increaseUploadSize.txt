@@ -1,0 +1,8 @@
+Make these changes to the php.ini file. Just go to your XAMPP folder and search php.ini.
+Then, simply search through the document using the variable names and assign the appropriate values.
+
+post_max_size = 800M 
+upload_max_filesize = 800M 
+max_execution_time = 5000 
+max_input_time = 5000 
+memory_limit = 1000M
