@@ -59,4 +59,4 @@ angular.module('project').value('projectListValue', [
     site: 'https://facebook.github.io/react/',
     description: 'A JavaScript library for building user interfaces.'
   }
-])
+]);

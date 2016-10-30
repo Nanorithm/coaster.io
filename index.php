@@ -11,9 +11,11 @@
 
     <!-- JQuery -->
     <script src="/static/js/jquery-1.11.3.min.js"></script>
+
     <!-- Bootstrap -->
     <script src="/static/js/bootstrap.min.js"></script>
-    <!-- AngularJS
+
+    <!-- angluarJS
     <script src="/static/js/angular.min.js"></script>
     <script src="/static/js/angular-resource.min.js"></script>
     <script src="/static/js/angular-route.min.js"></script>
@@ -22,6 +24,7 @@
     <script src="/static/js/search.js"></script>
     <script src="/static/js/project-list.js"></script>
     -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js">
     </script>
@@ -29,8 +32,8 @@
     </script>
     <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
-    <script src="static/js/project-list.js"></script>
-    <script src="static/js/project.js"></script>
+    <script src="/static/js/project.js"></script>
+    <script src="/static/js/project-list.js"></script>
     <!-- Search script -->
     <script src="/static/js/search.js"></script>
     <title>cocktail.io</title>
@@ -63,7 +66,7 @@
             <!-- 1 -->
             <!-- leftmost pane - searching items -->
             <div id="left" class="col-sm-4">
-                <div class="inner" data-ng-app="project">
+                <div class="inner" ng-view>
                     <div data-ng-view></div>
                 </div>
             </div>
