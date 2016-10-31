@@ -1,6 +1,6 @@
-<input type="text" ng-model="projectList.search" class="search-query" id="projects_search"
+<input type="text" ng-model="projectList.search" class="search-query form-control input-lg" id="projects_search"
        placeholder="Search">
-<table>
+<table width="100%" style="border-spacing: 2px;">
     <thead>
     <tr>
         <th>Project</th>
@@ -13,7 +13,7 @@
         <td><a ng-href="{{project.site}}" target="_blank">{{project.name}}</a></td>
         <td>{{project.description}}</td>
         <td>
-            <a ng-href="#/edit/{{project.$id}}"><i class="icon-pencil"></i></a>
+            <a ng-href="#/edit/{{project.$id}}">[ + ]</a>
         </td>
     </tr>
     </tbody>

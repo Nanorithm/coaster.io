@@ -1,11 +1,28 @@
 body{
     background-color: transparent;
+    width: 100%;
+    height: 100%;
 }
 
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Main Divs */
+.container-fluid {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+}
 #panes {
     overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
+    overflow-y: hidden;
 }
 
 #left {
@@ -13,6 +30,8 @@ body{
 }
 #center {
     border: 1px solid black;
+    height: calc(100vh - 100px);
+    overflow: auto;
 }
 
 #right {
@@ -23,4 +42,96 @@ body{
     border: 1px solid black;
     margin: 5px;
     padding: 5px;
+    overflow: auto;
+    min-height: 100%;
+}
+
+/* NavBar */
+.navbar {
+    min-height:38px;
+}
+
+.navbar .navbar-brand{
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 38px;
+    height: 30px;
+}
+
+.navbar .navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 38px;
+}
+.navbar .navbar-toggle {
+    margin-top: 3px;
+    margin-bottom: 0px;
+    padding: 8px 9px;
+}
+.navbar .navbar-form {
+    margin-top: 2px;
+    margin-bottom: 0px
+}
+.navbar .navbar-collapse {
+    border-color: #A40303;
+}
+
+/* Drink cards */
+.business-card {
+    border: 1px solid #cccccc;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.business-card:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+.profile-img {
+    height: 120px;
+    background: white;
+}
+.job {
+    color: #666666;
+    font-size: 17px;
+}
+.mail {
+    font-size: 16px;
+}
+/* Modal stuff */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
