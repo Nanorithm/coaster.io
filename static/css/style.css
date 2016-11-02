@@ -1,7 +1,6 @@
 body{
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
+    background-color: #ffffff;
+    font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 th, td {
@@ -10,28 +9,33 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+h1, input {
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
 /* Main Divs */
 .container-fluid {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    bottom: 0px;
-    right: 0;
+    overflow: hidden;
+    margin-top:48px;
+    margin-bottom: -40px;
 }
+
 #panes {
     overflow-x: auto;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
 }
 
 #left {
     border: 1px solid black;
+    min-width: 33.333333%;
+    padding-bottom: 65px;
 }
 #center {
     border: 1px solid black;
-    height: calc(100vh - 100px);
-    overflow: auto;
+    min-width: 33.333333%;
 }
 
 #right {
@@ -40,15 +44,36 @@ th, td {
 
 .inner {
     border: 1px solid black;
-    margin: 5px;
-    padding: 5px;
     overflow: auto;
     min-height: 100%;
+    height: calc(100vh - 215px);
+
+}
+
+.row.row-grid [class*="col-"] + [class*="col-"] {
+    margin-top: 25px;
+}
+
+@media (min-width: 1200px) {
+    .row.row-grid [class*="col-lg-"] + [class*="col-lg-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .row.row-grid [class*="col-md-"] + [class*="col-md-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 768px) {
+    .row.row-grid [class*="col-sm-"] + [class*="col-sm-"] {
+        margin-top: 0;
+    }
 }
 
 /* NavBar */
 .navbar {
     min-height:38px;
+    margin-bottom: 0;
 }
 
 .navbar .navbar-brand{
@@ -74,6 +99,8 @@ th, td {
 }
 .navbar .navbar-collapse {
     border-color: #A40303;
+    overflow-x: hidden;
+    max-height: 100%;
 }
 
 /* Drink cards */

@@ -39,7 +39,7 @@
     <title>coaster.io</title>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -82,11 +82,12 @@
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
     <div class="container-fluid">
-        <div id="panes" class="row">
+        <div id="panes" class="row row-grid">
             <!-- 1 -->
             <!-- leftmost pane - searching items -->
             <div id="left" class="col-sm-4">
-                <div class="inner" ng-view>
+                <input type="text" ng-model="projectList.search" class="search-query form-control input-lg" id="projects_search" placeholder="Search"><br>
+                <div class="inner" ng-view style="border-color: black">
                     <div data-ng-view></div>
                 </div>
             </div>
@@ -179,14 +180,15 @@
     </div>
 
     <!-- Modals -->
+<!--
     <div id="modal1" class="modal">
 
-        <!-- Modal content -->
+        <!-- Modal content 
         <div class="modal-content">
             <span class="close">x</span>
             <p>Some text in the Modal..</p>
         </div>
 
-    </div>
+    </div> -->
 </body>
 </html>
