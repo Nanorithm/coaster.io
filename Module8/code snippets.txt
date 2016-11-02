@@ -1,0 +1,70 @@
+THEME
+https://www.bootstrapzero.com/bootstrap-template/bootstrap-free-minimal-ui-kit
+
+"Bootstrap one-page template with Parallax effect"
+https://www.script-tutorials.com/bootstrap-one-page-template-with-parallax-effect/
+
+
+
+
+SNIPPETS
+"Cleaner List Group with Hidden Sub-menu"
+http://bootsnipp.com/snippets/featured/cleaner-list-group-with-hidden-sub-menu
+
+"Advanced Dropdown Search"
+http://bootsnipp.com/snippets/featured/advanced-dropdown-search
+
+"Product chooser / selector"
+http://bootsnipp.com/snippets/featured/product-chooser-selector
+
+"Nav Bar with Popup Sign in"
+http://bootsnipp.com/snippets/featured/nav-bar-with-popup-sign-in
+
+"Login and Register New Style - Tabbed "
+http://bootsnipp.com/snippets/kE9rg
+
+"Login page"
+http://bootsnipp.com/snippets/GXAAE
+
+"Vertical Simple Tab"
+http://bootsnipp.com/snippets/RlrN4
+
+"User HomePage"
+http://bootsnipp.com/snippets/pebRO
+
+"Fading Carousel w/ fading caption"
+http://bootsnipp.com/snippets/50Qlv
+
+"slider full size "
+http://bootsnipp.com/snippets/z4ne1
+
+"Bookmarks Reading List"
+http://bootsnipp.com/snippets/featured/bookmarks-reading-list
+
+
+"Carousel Static Headline Caption"
+http://bootsnipp.com/snippets/featured/carousel-static-headline-caption
+
+"Modal with blur effect like iOS"
+http://bootsnipp.com/snippets/featured/modal-with-blur-effect-like-ios
+
+"Responsive bs-carousel with hero headers"
+http://bootsnipp.com/snippets/featured/responsive-bs-carousel-with-hero-headers
+
+"Signin and Signup page"
+http://bootsnipp.com/snippets/VERA8
+
+"Card"
+http://bootsnipp.com/snippets/BDqOz
+
+"Modal Login Form With Navbar"
+http://bootsnipp.com/snippets/GzrWo
+
+"Account in Navbar"
+http://bootsnipp.com/snippets/featured/account-in-navbar
+
+"Nav Bar with Popup Sign in"
+http://bootsnipp.com/snippets/68Rd
+
+"One Page Scroll with Animations"
+https://ihatetomatoes.net/one-page-scroll-with-animations/
