@@ -41,7 +41,6 @@ http://bootsnipp.com/snippets/z4ne1
 "Bookmarks Reading List"
 http://bootsnipp.com/snippets/featured/bookmarks-reading-list
 
-
 "Carousel Static Headline Caption"
 http://bootsnipp.com/snippets/featured/carousel-static-headline-caption
 
@@ -65,6 +64,9 @@ http://bootsnipp.com/snippets/featured/account-in-navbar
 
 "Nav Bar with Popup Sign in"
 http://bootsnipp.com/snippets/68Rd
+
+"Search with dropdown"
+http://bootsnipp.com/snippets/GzXXl
 
 "One Page Scroll with Animations"
 https://ihatetomatoes.net/one-page-scroll-with-animations/
