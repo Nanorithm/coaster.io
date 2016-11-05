@@ -53,7 +53,12 @@ img {
 		</td>
 	</tr>
 </table>
-<script>
+
+ <input type="text" id="name" name="user_name" placeholder="username"/>
+ <input type="text" id="pw" name="password" placeholder="password"/>
+ <button onclick="passUsernameAndPW();">Submit</button>
+
+<script type = "text/javascript">
 
 	function getInfoAndPicture(id) {
 		getInfo(id);
@@ -107,6 +112,20 @@ img {
 		document.getElementById("picture1").style.visibility=" hidden";
 		document.getElementById("picture2").style.visibility=" hidden";
 		document.getElementById("picture3").style.visibility=" hidden";
+	}
+	
+	function passUsernameAndPW() {
+		var newUser=document.getElementById("name").value;
+		var newPW=document.getElementById("pw").value;
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open('POST', 'testDBg.php');
+		xmlhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200){
+			
+			}
+		};
+		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xmlhttp.send("UN=" + encodeURIComponent(newUser) + "&PW=" + encodeURIComponent(newPW));
 	}
 	
 	window.addEventListener( "load", hideFrame, false );
