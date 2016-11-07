@@ -10,10 +10,10 @@
    <link rel="stylesheet" href="static/css/style.css">
 
     <!-- JQuery -->
-    <script src="/static/js/jquery-1.11.3.min.js"></script>
+    <script src="static/js/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 
     <!-- angluarJS
     <script src="/static/js/angular.min.js"></script>
@@ -35,7 +35,7 @@
     <script src="/static/js/project-list.js"></script>
      <!-- Search script
     <script src="/static/js/search.js"></script> -->
-    <script src="/static/js/modal.js"></script>
+    <!-- <script src="static/js/modal.js"></script>  -->
 
     <title>coaster.io</title>
 </head>
@@ -123,9 +123,10 @@
                                         <div class="form-group">
                                             <label for="filter">Filter by</label>
                                             <select class="form-control">
-                                                <option value="0" selected>Liquor</option>
-                                                <option value="1">Mixer</option>
-                                                <option value="2">Garnish</option>
+                                                <option value="0" selected>------</option>
+                                                <option value="1">Liquor</option>
+                                                <option value="2">Mixer</option>
+                                                <option value="3">Garnish</option>
                                             </select>
                                         </div>
 
