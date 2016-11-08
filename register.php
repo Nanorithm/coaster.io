@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="static/css/register.css">
 
     <!-- JQuery -->
-    <script src="/static/js/jquery-1.11.3.min.js"></script>
+    <script src="static/js/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 
-    <script src="/static/js/modal.js"></script>
+    <script src="static/js/modal.js"></script>
 
     <title>coaster.io | Registration</title>
 </head>
@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">coaster.io</a>
+        <a class="navbar-brand" href="/coaster.io/index.php">coaster.io</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,7 +50,6 @@
             <hr>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/register.php">Sign Up</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
                 <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
@@ -95,7 +94,7 @@
                             <form id="login-form" action="#" method="post" role="form" style="display: block;">
                                 <h2>LOGIN</h2>
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required="required">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required="required" style="width: 100%">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
@@ -111,7 +110,7 @@
                             <form id="register-form" action="#" method="post" role="form" style="display: none;">
                                 <h2>REGISTER</h2>
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="required" value="">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="required" value="" style="width: 100%">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">

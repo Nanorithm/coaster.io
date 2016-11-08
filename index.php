@@ -5,9 +5,10 @@
 
     <!-- Bootstrap stuffs -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" id="bootstrap-css">
 
-   <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css?version=51">
+    <link rel="stylesheet" href="static/css/carousel.css?version=50">
 
     <!-- JQuery -->
     <script src="static/js/jquery-1.11.3.min.js"></script>
@@ -15,98 +16,89 @@
     <!-- Bootstrap -->
     <script src="static/js/bootstrap.min.js"></script>
 
-    <!-- angluarJS
-    <script src="/static/js/angular.min.js"></script>
-    <script src="/static/js/angular-resource.min.js"></script>
-    <script src="/static/js/angular-route.min.js"></script>
-    <script src="/static/js/firebase.js"></script>
-    <script src="/static/js/angularfire.min.js"></script>
-    <script src="/static/js/search.js"></script>
-    <script src="/static/js/project-list.js"></script>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
-
-    <script src="/static/js/project.js"></script>
-    <script src="/static/js/project-list.js"></script>
-     <!-- Search script
-    <script src="/static/js/search.js"></script> -->
-    <!-- <script src="static/js/modal.js"></script>  -->
-
     <title>coaster.io</title>
+
 </head>
 <body>
 
-<!-- Nav Bar -->
-<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/index.php">coaster.io</a>
+<header>
+
+
+    <div class="container">
+        <div id="color-overlay"> </div>
+        <div class="intro-text" style="z-index: 3">
+            <div class="intro-heading">coaster.io</div>
+            <div class="intro-lead-in">The last drink mixer you'll ever need</div>
+            <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a>
+        </div>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li class="dropdown hidden-lg">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#left">Search</a></li>
-                    <li><a href="#center">Drinks</a></li>
-                    <li><a href="#right">List</a></li>
+</header>
+
+<!-- Begin Navbar -->
+<div id="nav">
+    <div class="navbar navbar-default navbar-static" data-spy="affix" data-offset-top="800">
+        <div class="container">
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="navbar-brand" href="#">coaster.io</a>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" class="scroll4">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="dropdown hidden-lg">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#left" class="scroll1">Search</a></li>
+                            <li><a href="#center" class="scroll2">Drinks</a></li>
+                            <li><a href="#right" class="scroll3">List</a></li>
+                        </ul>
+                    </li>
+                    <hr>
                 </ul>
-            </li>
-            <hr>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="/register.php">Sign Up</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
-                <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
-                    <li>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2" style="width: 100%" placeholder="Username" required>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/coaster.io/register.php">Sign Up</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" style="width: 100%" placeholder="Username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" style="width: 100%" placeholder="Password" required>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Remember me
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" style="width: 100%" placeholder="Password" required>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Remember me
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-success btn-block">Sign in</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-</nav>
+            </div>
+        </div>
+    </div><!-- /.navbar -->
+</div>
+
 
 <!-- End Nav Bar -->
-
-    <div class="container-fluid">
+    <div class="container-fluid" id="main">
         <div id="panes" class="row row-grid">
             <!-- 1 -->
             <!-- leftmost pane - searching items -->
@@ -221,6 +213,7 @@
         </div>
     </div>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- Modals -->
 <!--
     <div id="modal1" class="modal">
@@ -240,14 +233,6 @@
         });
     });
 
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-            $('nav').addClass('shrink');
-        } else {
-            $('nav').removeClass('shrink');
-        }
-    });
-
     $(document).ready(function() {
         $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
             e.preventDefault();
@@ -257,6 +242,37 @@
             $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
             $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
         });
+    });
+
+    $('#nav').affix({
+        offset: {
+            top: $('header').height()
+        }
+    });
+
+    var shiftWindow = function() { scrollBy(0, -70) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $(".page-scroll").click(function() {
+        $('html,body').animate({scrollTop: $("#main").offset().top}, 'slow');
+        shiftWindow();
+    });
+    $(".scroll1").click(function() {
+        $('html,body').animate({scrollTop: $("#left").offset().top}, 'slow');
+        shiftWindow();
+    });
+    $(".scroll2").click(function() {
+        $('html,body').animate({scrollTop: $("#center").offset().top}, 'slow');
+        shiftWindow();
+    });
+    $(".scroll3").click(function() {
+        $('html,body').animate({scrollTop: $("#right").offset().top}, 'slow');
+        shiftWindow();
+    });
+    $(".scroll4").click(function() {
+        $('html,body').animate({scrollTop: $("#").offset().top}, 'slow');
+        shiftWindow();
     });
 </script>
 </body>
