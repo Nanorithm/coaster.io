@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="static/css/bootstrap.min.css" id="bootstrap-css">
 
-    <link rel="stylesheet" href="static/css/style.css?version=51">
+    <link rel="stylesheet" href="static/css/style.css?version=52">
     <link rel="stylesheet" href="static/css/carousel.css?version=50">
 
     <!-- JQuery -->
@@ -36,7 +36,7 @@
 
 <!-- Begin Navbar -->
 <div id="nav">
-    <div class="navbar navbar-default navbar-static" data-spy="affix" data-offset-top="800">
+    <div class="navbar navbar-inverse navbar-static" data-spy="affix" data-offset-top="800">
         <div class="container">
             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
             <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -70,11 +70,11 @@
                                         <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                             <div class="form-group">
                                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail2" style="width: 100%" placeholder="Username" required>
+                                                <input type="email" class="form-control logcolor" id="exampleInputEmail2" style="width: 100%" placeholder="Username" required>
                                             </div>
                                             <div class="form-group">
                                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword2" style="width: 100%" placeholder="Password" required>
+                                                <input type="password" class="form-control logcolor" id="exampleInputPassword2" style="width: 100%" placeholder="Password" required>
                                             </div>
                                             <div class="checkbox">
                                                 <label>

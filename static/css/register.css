@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
 body {
-    padding-top: 90px;
     background: repeating-linear-gradient(
             to right,
             #3f3f3f,
@@ -41,6 +40,13 @@ input[type="text"]{
     padding:5px;
     margin-bottom:5px;
     font-size:1.5em;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .dropdown-menu {

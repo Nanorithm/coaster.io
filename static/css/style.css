@@ -1,9 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
-body{
-    background-color: #ffffff;
+body{/*
+    background: repeating-linear-gradient(
+            to right,
+            #3f3f3f,
+            #3f3f3f 10px,
+            #1c1c1c 10px,
+            #1c1c1c 20px
+    );*/
     font-family: 'Roboto', sans-serif;
+    font-weight:100;
     margin: 0;
+    color: #fff;
 }
 
 th, td {
@@ -28,6 +36,11 @@ section {
     height:calc(90% - 40px);
 }
 
+.list-group {
+    font-weight: 500;
+    color: #000;
+}
+
 .sticky {
     position:fixed;
     top:0;
@@ -37,8 +50,32 @@ section {
     padding-top:40px;
 }
 
+.dropdown-menu {
+    background-color: #222;
+}
 
+#exampleInputPassword2, #exampleInputEmail2 {
+    background-color: #555555;
+}
 
+.logcolor::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #FFF;
+}
+.logcolor:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #FFF;
+    opacity: 1;
+}
+.logcolor::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #FFF;
+    opacity: 1;
+}
+.logcolor:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #FFF;
+}
 
 .container-fluid {
     position: relative;
@@ -46,6 +83,10 @@ section {
     max-height:500px;
     margin-bottom: 0;
     margin-top: 500px;
+}
+
+#adv-search {
+    margin-top: 5px;
 }
 
 #panes {
@@ -69,6 +110,8 @@ section {
     border: 1px solid black;
     min-height: 100%;
     height: calc(100vh - 215px);
+    background-color:rgba(0, 0, 0, 0.4);
+    
 
 }
 
@@ -273,7 +316,7 @@ section {
 @media screen and (min-width: 768px) {
     #adv-search {
         width: 95%;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
     .dropdown.dropdown-lg {

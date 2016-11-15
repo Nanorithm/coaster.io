@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/register.css">
+    <link rel="stylesheet" href="static/css/register.css?version=1">
 
     <!-- JQuery -->
     <script src="static/js/jquery-1.11.3.min.js"></script>
@@ -23,66 +23,66 @@
 </head>
 <body>
 <!-- Nav Bar -->
-<nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/coaster.io/index.php">coaster.io</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li class="dropdown hidden-lg">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#left">Search</a></li>
-                    <li><a href="#center">Drinks</a></li>
-                    <li><a href="#right">List</a></li>
+<div id="nav">
+    <div class="navbar navbar-inverse navbar-static" data-spy="affix" data-offset-top="800">
+        <div class="container">
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="navbar-brand" href="#">coaster.io</a>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" class="scroll4">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="dropdown hidden-lg">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#left" class="scroll1">Search</a></li>
+                            <li><a href="#center" class="scroll2">Drinks</a></li>
+                            <li><a href="#right" class="scroll3">List</a></li>
+                        </ul>
+                    </li>
+                    <hr>
                 </ul>
-            </li>
-            <hr>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
-                <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
-                    <li>
-                        <div class="row">
-                            <div class="col-md-12" id="login-modal">
-                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                        <input type="email" class="form-control logcolor" id="exampleInputEmail2" style="width: 100%" placeholder="Email address" required>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/coaster.io/register.php">Sign Up</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                <input type="email" class="form-control logcolor" id="exampleInputEmail2" style="width: 100%" placeholder="Username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control logcolor" id="exampleInputPassword2" style="width: 100%" placeholder="Password" required>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Remember me
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control logcolor" id="exampleInputPassword2" style="width: 100%" placeholder="Password" required>
-                                    </div>
-                                    <div class="checkbox wht">
-                                        <label>
-                                            <input type="checkbox"> Remember me
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-success btn-block">Sign in</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-</nav>
+            </div>
+        </div>
+    </div><!-- /.navbar -->
+</div>
 
 <div class="container">
     <div class="row">
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-xs-6 form-group pull-left checkbox">
                                     <input id="checkbox1" type="checkbox" name="remember">
-                                    <label for="checkbox1">Remember Me</label>
+                                    <label for="checkbox1" style="color:#000">Remember Me</label>
                                 </div>
                                 <div class="col-xs-6 form-group pull-right">
                                     <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
