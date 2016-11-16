@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
-body{/*
+body{
     background: repeating-linear-gradient(
             to right,
             #3f3f3f,
             #3f3f3f 10px,
             #1c1c1c 10px,
             #1c1c1c 20px
-    );*/
+    );
     font-family: 'Roboto', sans-serif;
     font-weight:100;
     margin: 0;
@@ -82,7 +82,6 @@ section {
     height: 500px;
     max-height:500px;
     margin-bottom: 0;
-    margin-top: 500px;
 }
 
 #adv-search {
@@ -111,7 +110,7 @@ section {
     min-height: 100%;
     height: calc(100vh - 215px);
     background-color:rgba(0, 0, 0, 0.4);
-    
+
 
 }
 
