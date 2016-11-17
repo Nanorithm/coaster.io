@@ -57,6 +57,8 @@ img {
  <input type="text" id="name" name="user_name" placeholder="username"/>
  <input type="text" id="pw" name="password" placeholder="password"/>
  <button onclick="passUsernameAndPW();">Submit</button>
+ 
+ <div id="allTheThings"></div>
 
 <script type = "text/javascript">
 
@@ -74,6 +76,17 @@ img {
         };
         xmlhttp.open("GET", "testDBa.php?id=" + id, true);
         xmlhttp.send();
+	}
+	
+	function getAllTheThings() {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("allTheThings").innerHTML = this.responseText;
+			}
+		};
+		xmlhttp.open("GET", "testDBh.php", true);
+		xmlhttp.send();
 	}
 	
 	function getPicture(id) {
@@ -112,6 +125,7 @@ img {
 		document.getElementById("picture1").style.visibility=" hidden";
 		document.getElementById("picture2").style.visibility=" hidden";
 		document.getElementById("picture3").style.visibility=" hidden";
+		getAllTheThings();
 	}
 	
 	function passUsernameAndPW() {
