@@ -144,7 +144,7 @@
                                 </form>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button>
                     </div>
                 </div>
 				
@@ -588,6 +588,19 @@
         $('html,body').animate({scrollTop: $("#").offset().top}, 'slow');
         shiftWindow();
     });
+	
+	function display(id) {
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("results").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "testDB_leftDiv.php?id=" + id, true);
+        xmlhttp.send();
+	}
+	
+	
 </script>
 </body>
 </html>
