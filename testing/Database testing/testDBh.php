@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error. "<br>");
 }
 else {
-	$sql = "SELECT * FROM liquors";
+	$sql = "SELECT Liquor_Name FROM liquors";
 	$result = $conn->query($sql);
 
 	$response=array();
@@ -24,8 +24,11 @@ else {
 		}
 	}
 	
-	$jsonData=json_encode($response);
-	echo $jsonData;
+	for ($i = 0; $i < $result->num_rows; ++$i) {
+		$jsonData=json_encode(array_values((array)$response[$i]));
+		echo $jsonData;
+	}
+
 }
 $conn->close();
 ?>

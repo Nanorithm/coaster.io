@@ -589,14 +589,14 @@
         shiftWindow();
     });
 	
-	function display(id) {
+	function display() {
 		var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("results").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "testDB_leftDiv.php?id=" + id, true);
+        xmlhttp.open("GET", "testing/Database testing/testDBh.php", true);
         xmlhttp.send();
 	}
 	
