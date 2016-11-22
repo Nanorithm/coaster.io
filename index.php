@@ -123,7 +123,7 @@
         <div id="left" class="col-sm-4">
             <div class="inner">
             <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Search...." />
+                <input type="text" class="form-control" placeholder="Search...." id = "search" />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">

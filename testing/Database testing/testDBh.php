@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "YOURUSER";
 $password = "user";
 $dbname = "coaster";
-
+ 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -13,13 +13,17 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error. "<br>");
 }
 else {
-	$sql = "SELECT Liquor_Name FROM liquors";
-	$sql2 = "SELECT Mixer_Name FROM Mixers";
-	$sql3 = "SELECT Garnish_Name FROM Garnishes";
+	//$searchID = $_REQUEST["search"];
+	//$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE '".$searchID."%'";
+	$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE 'Whis%'";
+	
+	
+	//$sql2 = "SELECT Mixer_Name FROM Mixers";
+	//$sql3 = "SELECT Garnish_Name FROM Garnishes";
 	
 	$result = $conn->query($sql); // liquors
-	$result2 = $conn->query($sql2); // mixers
-	$result3 = $conn->query($sql3); // garnishes
+	//$result2 = $conn->query($sql2); // mixers
+	//$result3 = $conn->query($sql3); // garnishes
 	
 	// Liquors
 	$response=array();
@@ -35,6 +39,7 @@ else {
 		echo $jsonData;
 	}
 	
+	/*
 	// Mixers
 	$response2=array();
 	if ($result2->num_rows > 0) {
@@ -49,6 +54,8 @@ else {
 		echo $jsonData2;
 	}
 	
+	
+	
 	// Garnishes
 	$response3=array();
 	if ($result3->num_rows > 0) {
@@ -62,7 +69,7 @@ else {
 		$jsonData3=json_encode(array_values((array)$response3[$i]));
 		echo $jsonData3;
 	}
-	
+	*/
 
 }
 $conn->close();
