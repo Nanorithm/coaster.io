@@ -151,7 +151,7 @@
             </div>
 			<!-- Tyrone -->
 				<br/>
-				<div id = "results"></div>
+				<div id = "results" style="color:#FFFFFF"></div>
             </div>
         </div>
         <!-- 2 -->
