@@ -596,7 +596,8 @@
                 document.getElementById("results").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "testing/Database testing/testDBh.php", true);
+		var search=document.getElementById("search").value;
+        xmlhttp.open("GET", "testDBh.php?search=" + search, true);
         xmlhttp.send();
 	}
 	

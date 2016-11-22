@@ -13,9 +13,9 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error. "<br>");
 }
 else {
-	//$searchID = $_REQUEST["search"];
-	//$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE '".$searchID."%'";
-	$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE 'Whis%'";
+	$searchID = $_REQUEST["search"];
+	$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE '".$searchID."%'";
+	//$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE 'Whis%'";
 	
 	
 	//$sql2 = "SELECT Mixer_Name FROM Mixers";
