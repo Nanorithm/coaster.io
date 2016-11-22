@@ -18,12 +18,12 @@ else {
 	//$sql = "SELECT Liquor_Name FROM liquors WHERE Liquor_Name LIKE 'Whis%'";
 	
 	
-	//$sql2 = "SELECT Mixer_Name FROM Mixers";
-	//$sql3 = "SELECT Garnish_Name FROM Garnishes";
+	$sql2 = "SELECT Mixer_Name FROM Mixers WHERE Mixer_Name LIKE '".$searchID."%'";
+	$sql3 = "SELECT Garnish_Name FROM Garnishes WHERE Garnish_Name LIKE '".$searchID."%'";
 	
 	$result = $conn->query($sql); // liquors
-	//$result2 = $conn->query($sql2); // mixers
-	//$result3 = $conn->query($sql3); // garnishes
+	$result2 = $conn->query($sql2); // mixers
+	$result3 = $conn->query($sql3); // garnishes
 	
 	// Liquors
 	$response=array();
@@ -39,7 +39,7 @@ else {
 		echo $jsonData;
 	}
 	
-	/*
+	
 	// Mixers
 	$response2=array();
 	if ($result2->num_rows > 0) {
@@ -69,7 +69,7 @@ else {
 		$jsonData3=json_encode(array_values((array)$response3[$i]));
 		echo $jsonData3;
 	}
-	*/
+	
 
 }
 $conn->close();

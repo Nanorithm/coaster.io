@@ -597,7 +597,7 @@
             }
         };
 		var search=document.getElementById("search").value;
-        xmlhttp.open("GET", "testDBh.php?search=" + search, true);
+        xmlhttp.open("GET", "testing/Database Testing/testDBh.php?search=" + search, true);
         xmlhttp.send();
 	}
 	
