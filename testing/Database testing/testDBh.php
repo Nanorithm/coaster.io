@@ -37,6 +37,11 @@ else {
 	for ($i = 0; $i < $result->num_rows; ++$i) {
 		$jsonData=json_encode(array_values((array)$response[$i]));
 		echo $jsonData;
+		
+		
+		
+		//echo "<a href = 'http://www.google.com'>$jsonData</a>";
+		// Testing hyperlink
 	}
 	
 	
