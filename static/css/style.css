@@ -50,10 +50,6 @@ section {
     padding-top:40px;
 }
 
-.dropdown-menu {
-    background-color: #222;
-}
-
 #exampleInputPassword2, #exampleInputEmail2 {
     background-color: #555555;
 }
@@ -198,6 +194,7 @@ section {
 
 .affix .navbar {
     padding:0;
+    padding-top: 5px;
     -webkit-transition:padding 0.2s linear;
     -moz-transition:padding 0.2s linear;
     -o-transition:padding 0.2s linear;
@@ -218,6 +215,35 @@ section {
 
 .navbar-form input, .form-inline input {
     width:auto;
+}
+
+.black-bg {
+    background-color: #222 !important;
+}
+
+#wht {
+    color: #9d9d9d;
+}
+
+/* Logged in Navbar */
+
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
 }
 
 /* Drink cards */
@@ -285,6 +311,9 @@ section {
     margin-top: -1px;
     padding: 6px 20px;
 }
+
+
+
 .input-group-btn .btn-group {
     display: flex !important;
 }
