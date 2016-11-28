@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="static/css/bootstrap.css" id="bootstrap-css">
 
-    <link rel="stylesheet" href="static/css/style.css?version=52">
+    <link rel="stylesheet" href="static/css/style.css?version=53">
     <link rel="stylesheet" href="static/css/carousel.css?version=50">
 
 <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -142,7 +142,7 @@ End Nav Bar -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon glyphicon-user"></span> 
-                        <strong id="wht">{{ Username }}}</strong>
+                        <strong id="wht">{{ Username }}</strong>
                         <span class="glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <ul class="dropdown-menu black-bg">
@@ -155,7 +155,7 @@ End Nav Bar -->
                                         </p>
                                     </div>
                                     <div class="col-lg-8">
-                                        <p class="text-left" id="wht"><strong>{{ sername }}</strong></p>
+                                        <p class="text-left" id="wht"><strong>{{ Username }}</strong></p>
                                         <p class="text-left small" id="wht">thisemail@email.com</p>
                                         <p class="text-left">
                                             <a href="#" class="btn btn-primary btn-block btn-sm">User Favorites</a>

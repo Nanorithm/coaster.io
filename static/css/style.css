@@ -86,6 +86,7 @@ section {
 
 #panes {
     height: calc(100vh - 100px);
+    padding-top: 80px;
 }
 
 #left {
