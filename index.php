@@ -195,7 +195,7 @@ End Nav Bar -->
             <div class="input-group" id="adv-search">
                 <input type="text" class="form-control" placeholder="Search...." id = "search" />
                 <div class="input-group-btn">
-                    <div class="btn-group" role="group">
+                    <div class="btn-group" role="group" style="color: red">
                         <div class="dropdown dropdown-lg">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu">
@@ -221,7 +221,7 @@ End Nav Bar -->
             </div>
 			<!-- Tyrone -->
 				<br/>
-				<div id = "results" style="color:#FFFFFF"></div>
+				<div id = "results" style="color:#000000"></div>
             </div>
         </div>
         <!-- 2 -->
