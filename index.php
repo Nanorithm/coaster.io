@@ -319,7 +319,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
 
-                        <img src="Images/Whiskey.jpg" class="img-responsive" alt="">
+                        <img  class="img-responsive" alt="" id="whiskeyImg">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Whiskey</h4>
@@ -329,7 +329,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
 
-                        <img src="Images/Vodka.jpg" class="img-responsive" alt="">
+                        <img class="img-responsive" alt="" id="vodkaImg">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Vodka</h4>
@@ -339,7 +339,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
 
-                        <img src="Images/Gin.jpg" class="img-responsive" alt="">
+                        <img  class="img-responsive" alt="" id="ginImg">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Gin</h4>
@@ -349,17 +349,17 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
 
-                        <img src="Images/OldFashioned.jpg" class="img-responsive" alt="">
+                        <img  class="img-responsive" alt="" id="brandyImg">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Specialty Drinks</h4>
-                        <p class="text-muted">For the adventurous types</p>
+                        <h4>Brandy</h4>
+                        <p class="text-muted">For the old soul</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
 
-                        <img src="Images/Rum.jpg" class="img-responsive" alt="">
+                        <img  class="img-responsive" alt="" id="rumImg">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Rum</h4>
@@ -369,7 +369,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
 
-                        <img src="Images/Tequila.jpg" class="img-responsive" alt="">
+                        <img class="img-responsive" alt="" id="tequilaImg">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Tequila</h4>
@@ -697,6 +697,16 @@ End Nav Bar -->
         xmlhttp.send();
 	}
 
+	function initialize () {
+		document.getElementById("whiskeyImg").src="liquor_images.php?id=1";
+		document.getElementById("ginImg").src="liquor_images.php?id=2";
+		document.getElementById("rumImg").src="liquor_images.php?id=3";
+		document.getElementById("tequilaImg").src="liquor_images.php?id=4";
+		document.getElementById("brandyImg").src="liquor_images.php?id=5";
+		document.getElementById("vodkaImg").src="liquor_images.php?id=6";
+	}
+	
+	window.addEventListener( "load", initialize, false );
 
 </script>
 </body>
