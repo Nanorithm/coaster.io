@@ -1,0 +1,63 @@
+To update mixeddrinks:
+
+Click mixeddrinks in phpMyAdmin and select Structure from the toolbar.
+Click Change by MixedDrink_Description and change it to MixedDrink_Instructions.
+Click Browse on the toolbar and double click the text in each row under instructions to enter the new data (don't include the drink name):
+
+Old-Fashioned:
+Place the sugar cube (or 1/2 teaspoon loose sugar) in an Old-Fashioned glass
+Wet it down with 2 or 3 dashes of Angostura bitters and a short splash of water or club soda
+Crush the sugar with a wooden muddler, chopstick, strong spoon, lipstick, cartridge case, whatever
+Rotate the glass so that the sugar grains and bitters give it a lining
+Add a large ice cube
+Pour in the rye (or bourbon)
+Serve with a stirring rod
+
+Martinez:
+Add all ingredients to a shaker and fill with ice.
+Shake, and strain into a chilled coupe glass.
+
+Martini:
+Combine vodka and dry vermouth in a cocktail mixing glass. Fill with ice and stir until chilled. Strain into a chilled martini glass.
+Garnish with three olives on a toothpick.
+
+Manhattan:
+Stir the rye, vermouth and bitters well with cracked ice. 
+Strain into in a chilled cocktail glass and garnish with twist or, of course, maraschino cherry.
+
+Daiquiri:
+Add all the ingredients to a shaker and fill with ice.
+Shake, and strain into a chilled Martini glass.
+Garnish with a lime wheel.
+
+Margarita:
+If desired, salt the rim of a chilled margarita glass.
+Pour the ingredients into a cocktail shaker with ice cubes.
+Shake well.
+Strain into the prepared glass with or without fresh ice.
+Garnish with the lime wedge.
+
+Bloody Mary:
+Pour some celery salt onto a small plate.
+Rub the juicy side of the lemon or lime wedge along the lip of a pint glass.
+Roll the outer edge of the glass in celery salt until fully coated.
+Fill with ice and set aside.
+Squeeze the lemon and lime wedges into a shaker and drop them in.
+Add the remaining ingredients and fill with ice.
+Shake gently and strain into the prepared glass.
+Garnish with a celery stalk and a lime wedge.
+
+Irish Coffee:
+Add the whiskey and syrup to an Irish Coffee glass and fill two-thirds of the way with coffee.
+Top with one inch of whipped cream.
+
+Mint Julep:
+In a Julep cup or rocks glass, lightly muddle the mint and syrup.
+Add the bourbon and pack tightly with crushed ice.
+Stir until the cup is frosted on the outside.
+Top with more crushed ice to form an ice dome and garnish with a few drops of bitters, if desired, and a mint sprig.
+
+Cosmopolitan:
+Add all the ingredients to a shaker and fill with ice.
+Shake, and strain into a chilled cocktail glass.
+Garnish with a lime wedge.
