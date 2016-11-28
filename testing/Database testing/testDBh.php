@@ -24,6 +24,8 @@ else {
 	$result = $conn->query($sql); // liquors
 	$result2 = $conn->query($sql2); // mixers
 	$result3 = $conn->query($sql3); // garnishes
+	echo "<ul class='search-list'>";
+		
 	
 	// Liquors
 	$response=array();
@@ -36,12 +38,9 @@ else {
 	
 	for ($i = 0; $i < $result->num_rows; ++$i) {
 		$jsonData=json_encode(array_values((array)$response[$i]));
-		echo $jsonData;
 		
+		echo "<li class='list-group-item'>$jsonData</li>";
 		
-		
-		//echo "<a href = 'http://www.google.com'>$jsonData</a>";
-		// Testing hyperlink
 	}
 	
 	
@@ -56,7 +55,9 @@ else {
 	
 	for ($i = 0; $i < $result2->num_rows; ++$i) {
 		$jsonData2=json_encode(array_values((array)$response2[$i]));
-		echo $jsonData2;
+		
+		echo "<li class='list-group-item'>$jsonData2</li>";
+		
 	}
 	
 	
@@ -72,10 +73,12 @@ else {
 	
 	for ($i = 0; $i < $result3->num_rows; ++$i) {
 		$jsonData3=json_encode(array_values((array)$response3[$i]));
-		echo $jsonData3;
+		
+		echo "<li class='list-group-item'>$jsonData3</li>";
+		
 	}
 	
-
+		echo "</ul>";
 }
 $conn->close();
 ?>
