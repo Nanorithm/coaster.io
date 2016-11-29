@@ -319,7 +319,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
 
-                        <img  class="img-responsive" alt="" id="whiskeyImg">
+                        <img  class="img-responsive" alt="" id="whiskeyImg" onclick="pullMixedDrinkImagesforModal(1, 'whiskey')">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Whiskey</h4>
@@ -329,7 +329,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
 
-                        <img class="img-responsive" alt="" id="vodkaImg">
+                        <img class="img-responsive" alt="" id="vodkaImg" onclick="pullMixedDrinkImagesforModal(6, 'vodka')">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Vodka</h4>
@@ -339,7 +339,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
 
-                        <img  class="img-responsive" alt="" id="ginImg">
+                        <img  class="img-responsive" alt="" id="ginImg" onclick="pullMixedDrinkImagesforModal(2, 'gin')">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Gin</h4>
@@ -359,7 +359,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
 
-                        <img  class="img-responsive" alt="" id="rumImg">
+                        <img  class="img-responsive" alt="" id="rumImg" onclick="pullMixedDrinkImagesforModal(3, 'rum')">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Rum</h4>
@@ -369,7 +369,7 @@ End Nav Bar -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
 
-                        <img class="img-responsive" alt="" id="tequilaImg">
+                        <img class="img-responsive" alt="" id="tequilaImg" onclick="pullMixedDrinkImagesforModal(4, 'tequila')">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Tequila</h4>
@@ -437,22 +437,22 @@ End Nav Bar -->
                                 <p class="item-intro text-muted">Rugged and hard-working</p>
 
                                 <ul class="list-inline">
-                                    <li><a href="#recipe1" data-toggle="collapse" data-target="#recipe1"><img src="Images/OldFashioned.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe1" data-toggle="collapse" data-target="#recipe1"><img id="whiskeyDrink1" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe1">Ingredients: <br><br> Directions:</p>
                                     <p>Old Fashioned</p></li>
 
-                                    <li><a href="#recipe2" data-toggle="collapse" data-target="#recipe2"><img src="Images/Manhattan.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe2" data-toggle="collapse" data-target="#recipe2"><img id="whiskeyDrink2" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe2">Ingredients: <br><br> Directions:</p>
                                     <p>Manhattan</p></li>
 
-                                    <li><a href="#recipe3" data-toggle="collapse" data-target="#recipe3"><img src="Images/IrishCoffee.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe3" data-toggle="collapse" data-target="#recipe3"><img id="whiskeyDrink3" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe3">Ingredients: <br><br> Directions:</p>
                                     <p>Irish Coffee</p></li>
 
-                                    <li><a href="#recipe4" data-toggle="collapse" data-target="#recipe4"><img src="Images/MintJulep.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe4" data-toggle="collapse" data-target="#recipe4"><img id="whiskeyDrink4" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe4">Ingredients: <br><br> Directions:</p>
                                     <p>Mint Julep</p></li>
@@ -483,17 +483,17 @@ End Nav Bar -->
                                 <h2>Vodka Drinks</h2>
                                 <p class="item-intro text-muted">Staying classy</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe5" data-toggle="collapse" data-target="#recipe5"><img src="Images/Martini.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe5" data-toggle="collapse" data-target="#recipe5"><img id="vodkaDrink1" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe5">Ingredients: <br><br> Directions:</p>
                                     <p>Martini</p></li>
 
-                                    <li><a href="#recipe6" data-toggle="collapse" data-target="#recipe6"><img src="Images/BloodyMary.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe6" data-toggle="collapse" data-target="#recipe6"><img id="vodkaDrink2" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe6">Ingredients: <br><br> Directions:</p>
                                     <p>Bloody Mary</p></li>
 
-                                    <li><a href="#recipe7" data-toggle="collapse" data-target="#recipe7"><img src="Images/Cosmopolitan.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe7" data-toggle="collapse" data-target="#recipe7"><img id="vodkaDrink3" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe7">Ingredients: <br><br> Directions:</p>
                                     <p>Cosmopolitan</p></li>
@@ -526,7 +526,7 @@ End Nav Bar -->
                                 <h2>Gin Drinks</h2>
                                 <p class="item-intro text-muted">It's definitely not water</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe8" data-toggle="collapse" data-target="#recipe8"><img src="Images/Martinez.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe8" data-toggle="collapse" data-target="#recipe8"><img id="ginDrink1" class="img-responsive" alt=""></a>
 
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe8">Ingredients: <br><br> Directions:</p>
@@ -590,7 +590,7 @@ End Nav Bar -->
                                 <h2>Rum</h2>
                                  <p class="item-intro text-muted">When you're feeling like a captain</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe9" data-toggle="collapse" data-target="#recipe9"><img src="Images/Daiquiri.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe9" data-toggle="collapse" data-target="#recipe9"><img id="rumDrink1" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe9">Ingredients: <br><br> Directions:</p>
                                     <p>Daiquiri</p></li>
@@ -622,7 +622,7 @@ End Nav Bar -->
                                 <h2>Tequila</h2>
                                 <p class="item-intro text-muted">For those looking for a good and bad night</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe10" data-toggle="collapse" data-target="#recipe10"><img src="Images/Margarita.jpg" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe10" data-toggle="collapse" data-target="#recipe10"><img id="tequilaDrink1" class="img-responsive" alt=""></a>
                                       <!-- Put database ingredients and instructions here!!-->
                                       <p class="collapse" id="recipe10">Ingredients: <br><br> Directions:</p>
                                     <p>Margarita</p></li>
@@ -709,6 +709,71 @@ End Nav Bar -->
         xmlhttp.open("GET", "testing/Database Testing/testDBh.php?search=" + search, true);
         xmlhttp.send();
 	}
+	
+	function pullMixedDrinkImagesforModal(id, modal) {
+		var xmlhttp = new XMLHttpRequest();
+		var a="";
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				a = this.responseText;
+				fillModal(a, modal);
+			}
+		};
+		xmlhttp.open("GET", "mixeddrink_ID.php?id="+id, true);
+		xmlhttp.send();
+		
+		
+	}
+	
+	function fillModal(a, modal) {
+		if (modal=="whiskey") {
+			a=a.split(" ");
+			var one=a[0];
+			var two=a[1];
+			var three=a[2];
+			var four=a[3];
+			
+			document.getElementById("whiskeyDrink1").src="mixeddrink_Image.php?id=" + one;
+			document.getElementById("whiskeyDrink2").src="mixeddrink_Image.php?id=" + two;
+			document.getElementById("whiskeyDrink3").src="mixeddrink_Image.php?id=" + three;
+			document.getElementById("whiskeyDrink4").src="mixeddrink_Image.php?id=" + four;
+		}
+		
+		else if (modal=="vodka") {
+			a=a.split(" ");
+			var one=a[0];
+			var two=a[1];
+			var three=a[2];
+			
+			document.getElementById("vodkaDrink1").src="mixeddrink_Image.php?id=" + one;
+			document.getElementById("vodkaDrink2").src="mixeddrink_Image.php?id=" + two;
+			document.getElementById("vodkaDrink3").src="mixeddrink_Image.php?id=" + three;
+		}
+		
+		else if (modal=="gin") {
+			a=a.split(" ");
+			var one=a[0];
+			
+			document.getElementById("ginDrink1").src="mixeddrink_Image.php?id=" + one;
+		}
+		
+		else if (modal=="rum") {
+			a=a.split(" ");
+			var one=a[0];
+			
+			document.getElementById("rumDrink1").src="mixeddrink_Image.php?id=" + one;
+		}
+		
+		else if (modal=="tequila") {
+			a=a.split(" ");
+			var one=a[0];
+			
+			document.getElementById("tequilaDrink1").src="mixeddrink_Image.php?id=" + one;
+		}
+		
+		else {	
+		}
+	}
 
 	function initialize () {
 		document.getElementById("whiskeyImg").src="liquor_images.php?id=1";
@@ -717,6 +782,8 @@ End Nav Bar -->
 		document.getElementById("tequilaImg").src="liquor_images.php?id=4";
 		document.getElementById("brandyImg").src="liquor_images.php?id=5";
 		document.getElementById("vodkaImg").src="liquor_images.php?id=6";
+		
+		
 	}
 
 	window.addEventListener( "load", initialize, false );
