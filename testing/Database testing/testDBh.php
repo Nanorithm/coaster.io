@@ -24,7 +24,7 @@ else {
 	$result = $conn->query($sql); // liquors
 	$result2 = $conn->query($sql2); // mixers
 	$result3 = $conn->query($sql3); // garnishes
-	echo "<ul class='search-list'>";
+	echo "<ul class='list-group search-list list1' style='padding-left: 0'>";
 		
 	
 	// Liquors
