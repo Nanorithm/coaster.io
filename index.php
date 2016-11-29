@@ -20,6 +20,7 @@
     <script src="static/js/jquery-1.11.3.min.js"></script>
     <!-- Bootstrap -->
     <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/listgroup.min.js"></script>
     <title>coaster.io</title>
 </head>
 
@@ -160,7 +161,7 @@ End Nav Bar -->
                             <div class="btn-group" role="group" style="color: red">
                                 <div class="dropdown dropdown-lg">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu" style="z-index:2000">
                                         <form class="form-horizontal" role="form">
                                             <div class="form-group">
                                                 <label for="filter">Filter by</label>
@@ -221,7 +222,7 @@ End Nav Bar -->
                             <div class="bhoechie-tab-content active">
                                 <center>
                                     <h1 class="glyphicon glyphicon-glass glyph-size" style="color:#55518a"></h1>
-                                    <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                                    <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
                                     <h3 style="margin-top: 0;color:#55518a">Drink Name</h3> </center>
                             </div>
                             <!-- train section -->
@@ -248,9 +249,10 @@ End Nav Bar -->
                 <div class="inner">
                     <h3 style="color: white">Selected Items:</h3>
                     <input type='button' value='<<' id='move_left' />
-                    <ul class="list-group list2">
+                    <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
-                    </ul>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -698,26 +700,18 @@ End Nav Bar -->
         }
         window.addEventListener("load", initialize, false);
         //for moving lists
-        $('body').on('click', 'li', function () {
-            $(this).toggleClass('selected');
+        $('body').on('click', 'a', function () {
+            $(this).toggleClass('active');
         });
         $('#move_left').click(function () {
-            $('.list1').append($('.list2 .selected').removeClass('selected'));
+            $('.list1').append($('.list2 .active').removeClass('active'));
         });
         $('#move_right').click(function () {
-            $('.list2').append($('.list1 .selected').removeClass('selected'));
+            $('.list2').append($('.list1 .active').removeClass('active'));
         });
-        
-        $(function () {
-            console.log('ready');
-            $('.list-group-item li').click(function (e) {
-                e.preventDefault()
-                $that = $(this);
-                $('.list-group-item').find('li').removeClass('active');
-                $that.addClass('active');
-            });
-        })
     </script>
+    
+    <script src="https://cdn.jsdelivr.net/bootstrap.listgroup/1.1.2/listgroup.min.js"></script>
 </body>
 
 </html>

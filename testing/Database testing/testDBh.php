@@ -24,7 +24,7 @@ else {
 	$result = $conn->query($sql); // liquors
 	$result2 = $conn->query($sql2); // mixers
 	$result3 = $conn->query($sql3); // garnishes
-	echo "<ul class='list-group search-list list1' style='padding-left: 0'>";
+	echo "<div class='list-group list1' data-toggle='items'>";
 		
 	
 	// Liquors
@@ -39,7 +39,7 @@ else {
 	for ($i = 0; $i < $result->num_rows; ++$i) {
 		$jsonData=json_encode(array_values((array)$response[$i]));
 		
-		echo "<li class='list-group-item'>$jsonData</li>";
+		echo "<a href='#' class='list-group-item' onclick='return false;'>$jsonData</a>";
 		
 	}
 	
@@ -56,7 +56,7 @@ else {
 	for ($i = 0; $i < $result2->num_rows; ++$i) {
 		$jsonData2=json_encode(array_values((array)$response2[$i]));
 		
-		echo "<li class='list-group-item'>$jsonData2</li>";
+		echo "<a href='#' class='list-group-item' onclick='return false;'>$jsonData2</a>";
 		
 	}
 	
@@ -74,11 +74,11 @@ else {
 	for ($i = 0; $i < $result3->num_rows; ++$i) {
 		$jsonData3=json_encode(array_values((array)$response3[$i]));
 		
-		echo "<li class='list-group-item'>$jsonData3</li>";
+		echo "<a href='#' class='list-group-item' onclick='return false;'>$jsonData3</a>";
 		
 	}
 	
-		echo "</ul>";
+		echo "</div>";
 }
 $conn->close();
 ?>
