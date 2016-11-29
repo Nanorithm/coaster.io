@@ -153,7 +153,7 @@ End Nav Bar -->
             <!-- 1 -->
             <!-- leftmost pane - searching items -->
             <div id="left" class="col-sm-4">
-                <div class="inner">
+                <div class="inner" style="overflow-x:auto">
                     <div class="input-group" id="adv-search">
                         <input type="text" class="form-control" placeholder="Search...." id="search" />
                         <div class="input-group-btn">
