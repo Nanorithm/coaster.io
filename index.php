@@ -50,11 +50,11 @@
     </div>
 </header>
 
-<!-- Begin Navbar 
+<!-- Begin Navbar
 <div id="nav">
     <div class="navbar navbar-inverse navbar-static" data-spy="affix" data-offset-top="800">
         <div class="container">
-            <!-- .btn-navbar is used as the toggle for collapsed navbar content 
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content
             <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -183,7 +183,7 @@ End Nav Bar -->
         </div>
     </div>
 </div>
-    
+
 <!-- end logged in bar -->
 
 <div class="container-fluid" id="main">
@@ -418,7 +418,7 @@ End Nav Bar -->
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
-    <!-- Portfolio Modal 1 -->
+    <!-- Drink Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -437,14 +437,27 @@ End Nav Bar -->
                                 <p class="item-intro text-muted">Rugged and hard-working</p>
 
                                 <ul class="list-inline">
-                                    <li><img src="Images/Whiskey.jpg" class="img-responsive" alt="">
-                                    <p>Whiskey Coke</p></li>
-                                    <li><img src="Images/Whiskey.jpg" class="img-responsive" alt="">
-                                    <p>Whiskey Sour</p></li>
-                                    <li><img src="Images/Whiskey.jpg" class="img-responsive" alt="">
-                                    <p>On The Rocks</p></li>
+                                    <li><a href="#recipe1" data-toggle="collapse" data-target="#recipe1"><img src="Images/OldFashioned.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe1">Ingredients: <br><br> Directions:</p>
+                                    <p>Old Fashioned</p></li>
+
+                                    <li><a href="#recipe2" data-toggle="collapse" data-target="#recipe2"><img src="Images/Manhattan.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe2">Ingredients: <br><br> Directions:</p>
+                                    <p>Manhattan</p></li>
+
+                                    <li><a href="#recipe3" data-toggle="collapse" data-target="#recipe3"><img src="Images/IrishCoffee.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe3">Ingredients: <br><br> Directions:</p>
+                                    <p>Irish Coffee</p></li>
+
+                                    <li><a href="#recipe4" data-toggle="collapse" data-target="#recipe4"><img src="Images/MintJulep.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe4">Ingredients: <br><br> Directions:</p>
+                                    <p>Mint Julep</p></li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
                             </div>
                         </div>
                     </div>
@@ -453,7 +466,7 @@ End Nav Bar -->
         </div>
     </div>
 
-    <!-- Portfolio Modal 2 -->
+    <!-- Drink Modal 2 -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -470,15 +483,23 @@ End Nav Bar -->
                                 <h2>Vodka Drinks</h2>
                                 <p class="item-intro text-muted">Staying classy</p>
                                 <ul class="list-inline">
-                                    <li><img src="Images/Vodka.jpg" class="img-responsive" alt="">
-                                    <p>Screwdriver</p></li>
-                                    <li><img src="Images/Vodka.jpg" class="img-responsive" alt="">
-                                    <p>Mojito</p></li>
-                                    <li><img src="Images/Vodka.jpg" class="img-responsive" alt="">
-                                    <p>Vodka + Juice</p></li>
+                                    <li><a href="#recipe5" data-toggle="collapse" data-target="#recipe5"><img src="Images/Martini.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe5">Ingredients: <br><br> Directions:</p>
+                                    <p>Martini</p></li>
+
+                                    <li><a href="#recipe6" data-toggle="collapse" data-target="#recipe6"><img src="Images/BloodyMary.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe6">Ingredients: <br><br> Directions:</p>
+                                    <p>Bloody Mary</p></li>
+
+                                    <li><a href="#recipe7" data-toggle="collapse" data-target="#recipe7"><img src="Images/Cosmopolitan.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe7">Ingredients: <br><br> Directions:</p>
+                                    <p>Cosmopolitan</p></li>
                                 </ul>
 
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
                             </div>
                         </div>
                     </div>
@@ -487,7 +508,7 @@ End Nav Bar -->
         </div>
     </div>
 
-    <!-- Portfolio Modal 3 -->
+    <!-- Drink Modal 3 -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -501,18 +522,17 @@ End Nav Bar -->
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
+                                <!-- Drink Details Go Here -->
                                 <h2>Gin Drinks</h2>
                                 <p class="item-intro text-muted">It's definitely not water</p>
                                 <ul class="list-inline">
-                                    <li><img src="Images/Gin.jpg" class="img-responsive" alt="">
-                                    <p>Gin and Tonic</p></li>
-                                    <li><img src="Images/Gin.jpg" class="img-responsive" alt="">
-                                    <p>Gin</p></li>
-                                    <li><img src="Images/Gin.jpg" class="img-responsive" alt="">
-                                    <p>Gin</p></li>
+                                    <li><a href="#recipe8" data-toggle="collapse" data-target="#recipe8"><img src="Images/Martinez.jpg" class="img-responsive" alt=""></a>
+
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe8">Ingredients: <br><br> Directions:</p>
+                                    <p>Martinez</p></li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
                             </div>
                         </div>
                     </div>
@@ -521,7 +541,12 @@ End Nav Bar -->
         </div>
     </div>
 
-    <!-- Portfolio Modal 4 -->
+
+
+
+
+
+    <!-- Drink Modal 4 -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -536,17 +561,9 @@ End Nav Bar -->
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Specialty Drinks</h2>
-                                <p class="item-intro text-muted">For teh adventurous types</p>
-                                <ul class="list-inline">
-                                    <li><img src="Images/OldFashioned.jpg" class="img-responsive" alt="">
-                                    <p>Old Fashioned</p></li>
-                                    <li><img src="Images/OldFashioned.jpg" class="img-responsive" alt="">
-                                    <p>Mixed Drink</p></li>
-                                    <li><img src="Images/OldFashioned.jpg" class="img-responsive" alt="">
-                                    <p>Mixed Drink</p></li>
-                                </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Brandy</h2>
+                                <p class="item-intro text-muted">For the old soul</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
                             </div>
                         </div>
                     </div>
@@ -555,7 +572,7 @@ End Nav Bar -->
         </div>
     </div>
 
-    <!-- Portfolio Modal 5 -->
+    <!-- Drink Modal 5 -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -573,14 +590,12 @@ End Nav Bar -->
                                 <h2>Rum</h2>
                                  <p class="item-intro text-muted">When you're feeling like a captain</p>
                                 <ul class="list-inline">
-                                    <li><img src="Images/Rum.jpg" class="img-responsive" alt="">
-                                    <p>Rum and Coke</p></li>
-                                    <li><img src="Images/Rum.jpg" class="img-responsive" alt="">
-                                    <p>Rum</p></li>
-                                    <li><img src="Images/Rum.jpg" class="img-responsive" alt="">
-                                    <p>Rum On The Rocks</p></li>
+                                    <li><a href="#recipe9" data-toggle="collapse" data-target="#recipe9"><img src="Images/Daiquiri.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe9">Ingredients: <br><br> Directions:</p>
+                                    <p>Daiquiri</p></li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
                             </div>
                         </div>
                     </div>
@@ -589,7 +604,7 @@ End Nav Bar -->
         </div>
     </div>
 
-    <!-- Portfolio Modal 6 -->
+    <!-- Drink Modal 6 -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -607,14 +622,12 @@ End Nav Bar -->
                                 <h2>Tequila</h2>
                                 <p class="item-intro text-muted">For those looking for a good and bad night</p>
                                 <ul class="list-inline">
-                                    <li><img src="Images/Tequila.jpg" class="img-responsive" alt="">
-                                    <p>Tequila</p></li>
-                                    <li><img src="Images/Tequila.jpg" class="img-responsive" alt="">
-                                    <p>tequila</p></li>
-                                    <li><img src="Images/Tequila.jpg" class="img-responsive" alt="">
-                                    <p>Tequila</p></li>
+                                    <li><a href="#recipe10" data-toggle="collapse" data-target="#recipe10"><img src="Images/Margarita.jpg" class="img-responsive" alt=""></a>
+                                      <!-- Put database ingredients and instructions here!!-->
+                                      <p class="collapse" id="recipe10">Ingredients: <br><br> Directions:</p>
+                                    <p>Margarita</p></li>
                                 </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
                             </div>
                         </div>
                     </div>
@@ -705,7 +718,7 @@ End Nav Bar -->
 		document.getElementById("brandyImg").src="liquor_images.php?id=5";
 		document.getElementById("vodkaImg").src="liquor_images.php?id=6";
 	}
-	
+
 	window.addEventListener( "load", initialize, false );
 
 </script>
