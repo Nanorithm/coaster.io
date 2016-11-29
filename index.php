@@ -437,24 +437,24 @@ End Nav Bar -->
                                 <p class="item-intro text-muted">Rugged and hard-working</p>
 
                                 <ul class="list-inline">
-                                    <li><a href="#recipe1" data-toggle="collapse" data-target="#recipe1"><img id="whiskeyDrink1" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe1" data-toggle="collapse" data-target="#recipe1"><img id="whiskeyDrink1" class="img-responsive" alt="" onclick="getInstructions(1, 'recipe1')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe1">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe1"></p>
                                     <p>Old Fashioned</p></li>
 
-                                    <li><a href="#recipe2" data-toggle="collapse" data-target="#recipe2"><img id="whiskeyDrink2" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe2" data-toggle="collapse" data-target="#recipe2"><img id="whiskeyDrink2" class="img-responsive" alt="" onclick="getInstructions(4, 'recipe2')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe2">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe2"></p>
                                     <p>Manhattan</p></li>
 
-                                    <li><a href="#recipe3" data-toggle="collapse" data-target="#recipe3"><img id="whiskeyDrink3" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe3" data-toggle="collapse" data-target="#recipe3"><img id="whiskeyDrink3" class="img-responsive" alt="" onclick="getInstructions(8, 'recipe3')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe3">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe3"></p>
                                     <p>Irish Coffee</p></li>
 
-                                    <li><a href="#recipe4" data-toggle="collapse" data-target="#recipe4"><img id="whiskeyDrink4" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe4" data-toggle="collapse" data-target="#recipe4"><img id="whiskeyDrink4" class="img-responsive" alt="" onclick="getInstructions(9, 'recipe4')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe4">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe4"></p>
                                     <p>Mint Julep</p></li>
                                 </ul>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
@@ -483,19 +483,19 @@ End Nav Bar -->
                                 <h2>Vodka Drinks</h2>
                                 <p class="item-intro text-muted">Staying classy</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe5" data-toggle="collapse" data-target="#recipe5"><img id="vodkaDrink1" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe5" data-toggle="collapse" data-target="#recipe5"><img id="vodkaDrink1" class="img-responsive" alt="" onclick="getInstructions(3, 'recipe5')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe5">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe5"></p>
                                     <p>Martini</p></li>
 
-                                    <li><a href="#recipe6" data-toggle="collapse" data-target="#recipe6"><img id="vodkaDrink2" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe6" data-toggle="collapse" data-target="#recipe6"><img id="vodkaDrink2" class="img-responsive" alt="" onclick="getInstructions(7, 'recipe6')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe6">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe6"></p>
                                     <p>Bloody Mary</p></li>
 
-                                    <li><a href="#recipe7" data-toggle="collapse" data-target="#recipe7"><img id="vodkaDrink3" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe7" data-toggle="collapse" data-target="#recipe7"><img id="vodkaDrink3" class="img-responsive" alt="" onclick="getInstructions(10, 'recipe7')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe7">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe7"></p>
                                     <p>Cosmopolitan</p></li>
                                 </ul>
 
@@ -526,10 +526,10 @@ End Nav Bar -->
                                 <h2>Gin Drinks</h2>
                                 <p class="item-intro text-muted">It's definitely not water</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe8" data-toggle="collapse" data-target="#recipe8"><img id="ginDrink1" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe8" data-toggle="collapse" data-target="#recipe8"><img id="ginDrink1" class="img-responsive" alt="" onclick="getInstructions(2, 'recipe8')"></a>
 
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe8">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe8"></p>
                                     <p>Martinez</p></li>
                                 </ul>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
@@ -590,9 +590,9 @@ End Nav Bar -->
                                 <h2>Rum</h2>
                                  <p class="item-intro text-muted">When you're feeling like a captain</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe9" data-toggle="collapse" data-target="#recipe9"><img id="rumDrink1" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe9" data-toggle="collapse" data-target="#recipe9"><img id="rumDrink1" class="img-responsive" alt="" onclick="getInstructions(5, 'recipe9')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe9">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe9"></p>
                                     <p>Daiquiri</p></li>
                                 </ul>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
@@ -622,9 +622,9 @@ End Nav Bar -->
                                 <h2>Tequila</h2>
                                 <p class="item-intro text-muted">For those looking for a good and bad night</p>
                                 <ul class="list-inline">
-                                    <li><a href="#recipe10" data-toggle="collapse" data-target="#recipe10"><img id="tequilaDrink1" class="img-responsive" alt=""></a>
+                                    <li><a href="#recipe10" data-toggle="collapse" data-target="#recipe10"><img id="tequilaDrink1" class="img-responsive" alt="" onclick="getInstructions(6, 'recipe10')"></a>
                                       <!-- Put database ingredients and instructions here!!-->
-                                      <p class="collapse" id="recipe10">Ingredients: <br><br> Directions:</p>
+                                      <p class="collapse" id="recipe10"></p>
                                     <p>Margarita</p></li>
                                 </ul>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return </button>
@@ -722,7 +722,6 @@ End Nav Bar -->
 		xmlhttp.open("GET", "mixeddrink_ID.php?id="+id, true);
 		xmlhttp.send();
 		
-		
 	}
 	
 	function fillModal(a, modal) {
@@ -773,6 +772,17 @@ End Nav Bar -->
 		
 		else {	
 		}
+	}
+	
+	function getInstructions(id, tag) {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById(tag).innerHTML= this.responseText;
+			}
+		};
+		xmlhttp.open("GET", "mixeddrink_Instructions.php?id="+id, true);
+		xmlhttp.send();
 	}
 
 	function initialize () {
