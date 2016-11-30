@@ -611,14 +611,7 @@
             document.getElementById("vodkaImg").src = "liquor_images.php?id=6";
         }
         window.addEventListener("load", initialize, false);
-        <?php
-            if($logged_id){
-            include 'menu_authenticated.php';
-        }
-            else{
-                include 'menu_unauthenticated.php';
-        }
-        ?>
+        
         //for moving lists
         $('body').on('click', 'a', function () {
             $(this).toggleClass('active');
