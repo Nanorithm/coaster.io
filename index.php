@@ -65,7 +65,7 @@ else{
                             <div class="btn-group" role="group" style="color: red">
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button>
                                 <br>
-                                <button type="button" class="btn btn-primary" id='move_right' onclick="addMixedDrinks();"> <span class="glyphicon glyphicon-plus"></span></button>
+                                <button type="button" class="btn btn-primary" id='move_right' onclick="getActive();"> <span class="glyphicon glyphicon-plus"></span></button>
                                 <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
                             </div>
                         </div>
@@ -78,7 +78,7 @@ else{
             <!-- 2 -->
             <!-- center pane - display filtered drink cards -->
             <div id="center" class="col-sm-4">
-                <div class="inner">
+                <div class="inner" id="cards">
                     <!-- Card example
 
                 <div class="business-card" id="modal">
@@ -93,46 +93,7 @@ else{
                         </div>
                     </div>
                 </div> <!-- / example card -->
-                    <div id="mixedDrinksDiv">
-                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item active text-center item-width">
-                                        <h4 class="glyphicon glyphicon-glass"></h4>
-                                        <br/>Drink </a>
-                                    <a href="#" class="list-group-item text-center item-width">
-                                        <h4 class="glyphicon glyphicon-list-alt"></h4>
-                                        <br/>Ingredients </a>
-                                    <a href="#" class="list-group-item text-center item-width">
-                                        <h4 class="glyphicon glyphicon-pencil"></h4>
-                                        <br/>Directions </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
-                                <!-- flight section -->
-                                <div class="bhoechie-tab-content active">
-                                    <center>
-                                        <h1 class="glyphicon glyphicon-glass glyph-size" style="color:#55518a"></h1>
-                                        <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
-                                        <h3 style="margin-top: 0;color:#55518a">Drink Name</h3> </center>
-                                </div>
-                                <!-- train section -->
-                                <div class="bhoechie-tab-content">
-                                    <center>
-                                        <h1 class="glyphicon glyphicon-list-alt glyph-size" style="color:#55518a"></h1>
-                                        <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
-                                        <h3 style="margin-top: 0;color:#55518a">1. Ingredient 1</h3> </center>
-                                </div>
-                                <!-- hotel search -->
-                                <div class="bhoechie-tab-content">
-                                    <center>
-                                        <h1 class="glyphicon glyphicon-pencil glyph-size" style="color:#55518a"></h1>
-                                        <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
-                                        <h3 style="margin-top: 0;color:#55518a"><span id = "mixedDrinkID"></span></h3> </center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <!-- 3 -->
@@ -449,6 +410,8 @@ else{
 
     </div> -->
     <script>
+		var mixedDrinkArray=[];
+	
         $(document).ready(function () {
             //Handles menu drop down
             $('.dropdown-menu').find('form').click(function (e) {
@@ -517,18 +480,88 @@ else{
             xmlhttp.open("GET", "testing/Database Testing/testDBh.php?search=" + search, true);
             xmlhttp.send();
         }
+		
+		function getActive() {
+			var a=$( "a.active").html();
+			a=a.slice(2, -2);
+			addMixedDrinks(a);
+		}
 
         function addMixedDrinks(id) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById(id).innerHTML = this.responseText;
+                    a = this.responseText;
+					a=a.slice(0,-1);
+					mixedDrinkArray = a.split(" ");
+					var iterations=mixedDrinkArray.length;
+					createCards(mixedDrinkArray, iterations);
                 }
             };
-            var mixedDrinksDiv = document.getElementById("mixedDrinkID").value;
-            xmlhttp.open("GET", "testing/Database Testing/testDBi.php?search=" + mixedDrinksDiv, true);
+            xmlhttp.open("GET", "testing/Database Testing/testDBi.php?id=" + id, true);
             xmlhttp.send();
         }
+		
+		function createCards(array, iterations) {
+			var div=$( "#cards" );
+			div.empty();
+			for (var i=0; i<iterations; i++) {
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function () {
+					if (this.readyState == 4 && this.status == 200) {
+						var a=this.responseText;
+						a=a.split("|");
+						var strVar="";
+strVar += "<div >";
+strVar += "                        <div class=\"col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container\">";
+strVar += "                            <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu\">";
+strVar += "                                <div class=\"list-group\">";
+strVar += "                                    <a href=\"#\" class=\"list-group-item active text-center item-width\">";
+strVar += "                                        <h4 class=\"glyphicon glyphicon-glass\"><\/h4>";
+strVar += "                                        <br\/>Drink <\/a>";
+strVar += "                                    <a href=\"#\" class=\"list-group-item text-center item-width\">";
+strVar += "                                        <h4 class=\"glyphicon glyphicon-list-alt\"><\/h4>";
+strVar += "                                        <br\/>Ingredients <\/a>";
+strVar += "                                    <a href=\"#\" class=\"list-group-item text-center item-width\">";
+strVar += "                                        <h4 class=\"glyphicon glyphicon-pencil\"><\/h4>";
+strVar += "                                        <br\/>Directions <\/a>";
+strVar += "                                <\/div>";
+strVar += "                            <\/div>";
+strVar += "                            <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab\">";
+strVar += "                                <!-- flight section -->";
+strVar += "                                <div class=\"bhoechie-tab-content active\">";
+strVar += "                                    <center>";
+strVar += "                                        <h1 class=\"glyphicon glyphicon-glass glyph-size\" style=\"color:#55518a\"><\/h1>";
+strVar += "                                        <h2 style=\"margin-top: 0;color:#55518a\">"+a[0]+"<\/h2>";
+strVar += "                                        <h3 style=\"margin-top: 0;color:#55518a\"><\/h3> <\/center>";
+strVar += "                                <\/div>";
+strVar += "                                <!-- train section -->";
+strVar += "                                <div class=\"bhoechie-tab-content\">";
+strVar += "                                    <center>";
+strVar += "                                        <h1 class=\"glyphicon glyphicon-list-alt glyph-size\" style=\"color:#55518a\"><\/h1>";
+strVar += "                                        <h2 style=\"margin-top: 0;color:#55518a\">"+a[1]+", "+a[2]+", "+a[3]+"<\/h2>";
+strVar += "                                        <h3 style=\"margin-top: 0;color:#55518a\"><\/h3> <\/center>";
+strVar += "                                <\/div>";
+strVar += "                                <!-- hotel search -->";
+strVar += "                                <div class=\"bhoechie-tab-content\">";
+strVar += "                                    <center>";
+strVar += "                                        <h1 class=\"glyphicon glyphicon-pencil glyph-size\" style=\"color:#55518a\"><\/h1>";
+strVar += "                                        <h2 style=\"margin-top: 0;color:#55518a\">"+a[4]+"<\/h2>";
+strVar += "                                        <h3 style=\"margin-top: 0;color:#55518a\"><span id = \"mixedDrinkID\"><\/span><\/h3> <\/center>";
+strVar += "                                <\/div>";
+strVar += "                            <\/div>";
+strVar += "                        <\/div>";
+strVar += "                    <\/div>";
+
+						
+						div.append(strVar);
+						
+					}
+				};
+				xmlhttp.open("GET", "mixeddrink_AllData.php?id=" + array[i], true);
+				xmlhttp.send();
+			}
+		}
 
         function pullMixedDrinkImagesforModal(id, modal) {
             var xmlhttp = new XMLHttpRequest();
@@ -542,6 +575,8 @@ else{
             xmlhttp.open("GET", "mixeddrink_ID.php?id=" + id, true);
             xmlhttp.send();
         }
+		
+		
 
         function fillModal(a, modal) {
             if (modal == "whiskey") {
@@ -608,6 +643,8 @@ else{
         });
         $('#move_left').click(function () {
             $('.list1').append($('.list2 .active').removeClass('active'));
+			var div=$( "#cards" );
+			div.empty();
         });
         $('#move_right').click(function () {
             $('.list2').append($('.list1 .active').removeClass('active'));
