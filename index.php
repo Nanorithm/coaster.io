@@ -80,7 +80,6 @@ else{
             <div id="center" class="col-sm-4">
                 <div class="inner" id="cards">
                     <!-- Card example
-
                 <div class="business-card" id="modal">
                     <div class="media">
                         <div class="media-left">
@@ -101,8 +100,8 @@ else{
             <div id="right" class="col-sm-4">
                 <div class="inner">
                     <h3 style="color: white; text-align: center">Selected Items:</h3>
-                    <button type="button" class="btn btn-primary pull-right" id='move_left'>Remove</button><br><br><br>
-                    <div class="list-group list2" data-toggle="items">
+                    <button type="button" class="btn btn-primary pull-right" id='move_left' style="z-index: 2; position: relative; margin-top: 4px;margin-right: 5px;">Remove</button>
+                    <div class="list-group list2" data-toggle="items" style="z-index: 1">
                         <!-- empty div for contents -->
                     </div>
                 </div>
@@ -401,13 +400,11 @@ else{
     <!-- Modals -->
     <!--
     <div id="modal1" class="modal">
-
         <!-- Modal content
         <div class="modal-content">
             <span class="close">x</span>
             <p>Some text in the Modal..</p>
         </div>
-
     </div> -->
     <script>
 		var mixedDrinkArray=[];
@@ -468,7 +465,6 @@ else{
             }, 'slow');
             shiftWindow();
         });
-
         function display() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
@@ -486,7 +482,6 @@ else{
 			a=a.slice(2, -2);
 			addMixedDrinks(a);
 		}
-
         function addMixedDrinks(id) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
@@ -552,7 +547,6 @@ strVar += "                                <\/div>";
 strVar += "                            <\/div>";
 strVar += "                        <\/div>";
 strVar += "                    <\/div>";
-
 						
 						div.append(strVar);
 						
@@ -562,7 +556,6 @@ strVar += "                    <\/div>";
 				xmlhttp.send();
 			}
 		}
-
         function pullMixedDrinkImagesforModal(id, modal) {
             var xmlhttp = new XMLHttpRequest();
             var a = "";
@@ -577,7 +570,6 @@ strVar += "                    <\/div>";
         }
 		
 		
-
         function fillModal(a, modal) {
             if (modal == "whiskey") {
                 a = a.split(" ");
@@ -616,7 +608,6 @@ strVar += "                    <\/div>";
             }
             else {}
         }
-
         function getInstructions(id, tag) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
@@ -627,7 +618,6 @@ strVar += "                    <\/div>";
             xmlhttp.open("GET", "mixeddrink_Instructions.php?id=" + id, true);
             xmlhttp.send();
         }
-
         function initialize() {
             document.getElementById("whiskeyImg").src = "liquor_images.php?id=1";
             document.getElementById("ginImg").src = "liquor_images.php?id=2";
