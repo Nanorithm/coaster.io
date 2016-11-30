@@ -22,31 +22,41 @@
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/listgroup.min.js"></script>
     <title>coaster.io</title>
-    
+
     <script>
+<<<<<<< HEAD
 	<?php
     session_start();
 	?>
+=======
+
+>>>>>>> origin/master
     </script>
 </head>
 
 <body>
     <header>
+        <div class="tint">
         <div class="container">
             <div id="color-overlay"> </div>
-            <div class="intro-text" style="z-index: 3">
+            <div class="intro-text" style="z-index: 1">
                 <div class="intro-heading">coaster.io</div>
                 <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
         </div>
     </header>
 
     <!-- nav bar -->
-    
-    
+
+
     <div id="nav-container">
     <?php
+<<<<<<< HEAD
 	$logged_id = 0;
 if($SESSION['token'] = $logged_id){
+=======
+        $logged_id = 0;
+if($logged_id){
+>>>>>>> origin/master
     include 'menu_authenticated.php';
 }
 else{
@@ -54,8 +64,8 @@ else{
 }
 ?>
     </div>
-    
-    
+
+
     <!-- nav bar -->
     <div class="container-fluid" id="main">
         <div id="panes" class="row row-grid">
@@ -67,10 +77,10 @@ else{
                         <input type="text" class="form-control" placeholder="Search...." id="search" />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group" style="color: red">
-                                
+
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
                                 <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
-                                +</button>
+                                <span class="glyphicon glyphicon-plus"></span></button>
                                 <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
                             </div>
                         </div>
@@ -144,8 +154,8 @@ else{
             <!-- rightmost pane - holds selected items from left pane -->
             <div id="right" class="col-sm-4">
                 <div class="inner">
-                    <h3 style="color: white">Selected Items:</h3>
-                    <input type='button' value='<<' id='move_left' />
+                    <h2 style="color: white; text-align:center">Selected Items:</h2>
+                    <button type="button" class="btn btn-primary pull-right" id='move_left' style="z-index: 200" />Remove</button>
                     <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
 
@@ -523,11 +533,11 @@ else{
             xmlhttp.open("GET", "testing/Database Testing/testDBh.php?search=" + search, true);
             xmlhttp.send();
         }
-		
+
 		function addMixedDrinks(id) {
             var xmlhttp = new XMLHttpRequest();
-			
-			
+
+
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById(id).innerHTML = this.responseText;
@@ -610,7 +620,7 @@ else{
             document.getElementById("vodkaImg").src = "liquor_images.php?id=6";
         }
         window.addEventListener("load", initialize, false);
-        
+
         //for moving lists
         $('body').on('click', 'a', function () {
             $(this).toggleClass('active');

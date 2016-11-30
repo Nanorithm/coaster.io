@@ -24,6 +24,10 @@ h1, input {
     font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3 {
+    text-transform: none
+}
+
 #login-nav input {
     margin-bottom: 15px;
 }
@@ -55,6 +59,7 @@ section {
 
 #exampleInputPassword2, #exampleInputEmail2 {
     background-color: #555555;
+    color: #ccc
 }
 
 .logcolor::-webkit-input-placeholder {
