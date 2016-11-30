@@ -29,7 +29,7 @@ FROM mixeddrinks
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-			echo "Ingredients: <br>" .$row["Liquor_Name"]. "<br> " .$row["Mixer_Name"]. "<br> " .$row["Garnish_Name"]."<br><br>Directions: <br>".$row["MixedDrink_Instructions"];
+			echo "<strong>Ingredients: </strong><br>" .$row["Liquor_Name"]. "<br> " .$row["Mixer_Name"]. "<br> " .$row["Garnish_Name"]."<br><br><strong>Directions:</strong> <br>".$row["MixedDrink_Instructions"];
 		}
 	}
 }

@@ -6,7 +6,7 @@
     <!-- Bootstrap stuffs -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="static/css/bootstrap.css" id="bootstrap-css">
-    <link rel="stylesheet" href="static/css/style.css?version=54">
+    <link rel="stylesheet" href="static/css/style.css?version=56">
     <link rel="stylesheet" href="static/css/carousel.css?version=3">
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts -->
@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="intro-text" style="z-index: 2">
                     <div class="intro-heading">coaster.io</div>
-                    <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#main" class="page-scroll btn btn-xl">Tell Me More</a> </div>
+                    <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#main" class="page-scroll btn btn-xl">Tell Me More</a> <a href="#portfolio" class="scroll8 btn btn-xl">Our Drinks</a> </div>
             </div>
         </div>
         </div>
@@ -110,11 +110,11 @@ else{
     </div>
     <!-- Drink selection section -->
     <section id="portfolio">
-        <div class="container">
+        <div class="container container-style">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading" style="color: white">Types of Drinks</h2>
-                    <h3 class="section-subheading text-muted">Take a look and we'll show you what we have</h3> </div>
+                    <h3 class="section-subheading text-sub">Take a look and we'll show you what we have</h3> </div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -435,7 +435,8 @@ else{
         };
         if (location.hash) shiftWindow();
         window.addEventListener("hashchange", shiftWindow);
-        $(".page-scroll").click(function () {
+        $(".page-scroll").click(function (e) {
+            e.preventDefault();
             $('html,body').animate({
                 scrollTop: $("#main").offset().top
             }, 'slow');
@@ -464,6 +465,13 @@ else{
                 scrollTop: $("#").offset().top
             }, 'slow');
             shiftWindow();
+        });
+        
+        $(".scroll8").click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $("#portfolio").offset().top
+            }, 1200);
         });
         function display() {
             var xmlhttp = new XMLHttpRequest();
