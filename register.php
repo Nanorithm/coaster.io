@@ -37,14 +37,6 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#" class="scroll4">Home</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li class="dropdown hidden-lg">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#left" class="scroll1">Search</a></li>
-                            <li><a href="#center" class="scroll2">Drinks</a></li>
-                            <li><a href="#right" class="scroll3">List</a></li>
-                        </ul>
-                    </li>
                     <hr>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

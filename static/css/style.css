@@ -39,10 +39,6 @@ section {
     height:calc(90% - 40px);
 }
 
-.search-list {
-	padding-left: 0 !important;
-}
-
 .list-group {
     font-weight: 500;
     color: #000;
