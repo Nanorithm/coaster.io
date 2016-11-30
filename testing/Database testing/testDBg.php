@@ -9,6 +9,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $username = $_POST["username"];
 $password = $_POST["password"];
+$logged_id = 0;
+$url = 'http://localhost/coaster.io/index.php';
 
 // Check connection
 if ($conn->connect_error) {
@@ -17,7 +19,8 @@ if ($conn->connect_error) {
 else {
 	$sql = "INSERT INTO login (Username, PW) VALUES ('$username', '$password')";
 	$result = $conn->query($sql);
-	echo "Registration Successful!! <a href='http://localhost/coaster.io/index.php'>Return to Site.</a>";
+	$logged_id = 1;
+	header("Location: $url");
 }
 $conn->close();
 ?>
