@@ -21,15 +21,15 @@ FROM mixeddrinks
     JOIN mixers
         ON mixers.Mixer_ID = mixeddrinks.Mixer_ID
     JOIN garnishes
-        ON garnishes.Garnish_ID = mixeddrinks.Garnish_ID 
+        ON garnishes.Garnish_ID = mixeddrinks.Garnish_ID
 		WHERE mixeddrinks.MixedDrink_ID=".$selectedID;
-		
+
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-			echo "Ingredients: " .$row["Liquor_Name"]. ", " .$row["Mixer_Name"]. ", " .$row["Garnish_Name"]."<br><br>Directions: ".$row["MixedDrink_Instructions"];
+			echo "Ingredients: <br>" .$row["Liquor_Name"]. "<br> " .$row["Mixer_Name"]. "<br> " .$row["Garnish_Name"]."<br><br>Directions: <br>".$row["MixedDrink_Instructions"];
 		}
 	}
 }

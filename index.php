@@ -251,7 +251,7 @@ End Nav Bar -->
                     <input type='button' value='<<' id='move_left' />
                     <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
-                        
+
                     </div>
                 </div>
             </div>
@@ -710,7 +710,7 @@ End Nav Bar -->
             $('.list2').append($('.list1 .active').removeClass('active'));
         });
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/bootstrap.listgroup/1.1.2/listgroup.min.js"></script>
 </body>
 
