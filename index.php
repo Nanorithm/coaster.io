@@ -22,25 +22,26 @@
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/listgroup.min.js"></script>
     <title>coaster.io</title>
-    
+
     <script>
-    
+
     </script>
 </head>
 
 <body>
     <header>
+        <div class="tint">
         <div class="container">
             <div id="color-overlay"> </div>
-            <div class="intro-text" style="z-index: 3">
+            <div class="intro-text" style="z-index: 2">
                 <div class="intro-heading">coaster.io</div>
                 <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
         </div>
     </header>
 
     <!-- nav bar -->
-    
-    
+
+
     <div id="nav-container">
     <?php
         $logged_id = 0;
@@ -52,8 +53,8 @@ else{
 }
 ?>
     </div>
-    
-    
+
+
     <!-- nav bar -->
     <div class="container-fluid" id="main">
         <div id="panes" class="row row-grid">
@@ -65,7 +66,7 @@ else{
                         <input type="text" class="form-control" placeholder="Search...." id="search" />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group" style="color: red">
-                                
+
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
                                 <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
                                 <span class="glyphicon glyphicon-plus"></span></button>
@@ -521,11 +522,11 @@ else{
             xmlhttp.open("GET", "testing/Database Testing/testDBh.php?search=" + search, true);
             xmlhttp.send();
         }
-		
+
 		function addMixedDrinks(id) {
             var xmlhttp = new XMLHttpRequest();
-			
-			
+
+
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById(id).innerHTML = this.responseText;
@@ -608,7 +609,7 @@ else{
             document.getElementById("vodkaImg").src = "liquor_images.php?id=6";
         }
         window.addEventListener("load", initialize, false);
-        
+
         //for moving lists
         $('body').on('click', 'a', function () {
             $(this).toggleClass('active');
