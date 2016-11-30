@@ -85,7 +85,7 @@ section {
     position: relative;
     height: 500px;
     max-height:500px;
-    margin-bottom: 80px;
+    margin-bottom: 450px;
 }
 
 #adv-search {
@@ -95,7 +95,7 @@ section {
 
 #panes {
     height: calc(100vh - 100px);
-    padding-top: 80px;
+    padding-top: 200px;
 }
 
 #left {

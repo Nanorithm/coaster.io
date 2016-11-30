@@ -6,8 +6,8 @@
     <!-- Bootstrap stuffs -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="static/css/bootstrap.css" id="bootstrap-css">
-    <link rel="stylesheet" href="static/css/style.css?version=53">
-    <link rel="stylesheet" href="static/css/carousel.css?version=50">
+    <link rel="stylesheet" href="static/css/style.css?version=54">
+    <link rel="stylesheet" href="static/css/carousel.css?version=3">
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,11 +30,11 @@
     <header>
         <div class="tint">
             <div class="container">
-                <div id="color-overlay"> </div>
                 <div class="intro-text" style="z-index: 2">
                     <div class="intro-heading">coaster.io</div>
-                    <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
+                    <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#main" class="page-scroll btn btn-xl">Tell Me More</a> </div>
             </div>
+        </div>
         </div>
     </header>
     <!-- nav bar -->
@@ -140,8 +140,8 @@ else{
             <div id="right" class="col-sm-4">
                 <div class="inner">
                     <h3 style="color: white; text-align: center">Selected Items:</h3>
-                    <button type="button" class="btn btn-primary pull-right" id='move_left' style="z-index: 2">Remove</button><br><br><br>
-                    <div class="list-group list2" data-toggle="items" style="z-index: 3">
+                    <button type="button" class="btn btn-primary pull-right" id='move_left'>Remove</button><br><br><br>
+                    <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
                     </div>
                 </div>
