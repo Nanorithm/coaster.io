@@ -24,9 +24,7 @@
     <title>coaster.io</title>
 
     <script>
-	<?php
-    session_start();
-	?>
+
     </script>
 </head>
 
@@ -35,9 +33,10 @@
         <div class="tint">
         <div class="container">
             <div id="color-overlay"> </div>
-            <div class="intro-text" style="z-index: 1">
+            <div class="intro-text" style="z-index: 2">
                 <div class="intro-heading">coaster.io</div>
                 <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
+        </div>
         </div>
     </header>
 
@@ -46,10 +45,6 @@
 
     <div id="nav-container">
     <?php
-	$logged_id = 0;
-if($SESSION['token'] = $logged_id){
-        $logged_id = 0;
-}
 if($logged_id){
     include 'menu_authenticated.php';
 }
@@ -74,7 +69,7 @@ else{
 
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
                                 <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
-                                <span class="glyphicon glyphicon-plus"></span></button>
+                                +</button>
                                 <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
                             </div>
                         </div>
@@ -148,8 +143,8 @@ else{
             <!-- rightmost pane - holds selected items from left pane -->
             <div id="right" class="col-sm-4">
                 <div class="inner">
-                    <h2 style="color: white; text-align:center">Selected Items:</h2>
-                    <button type="button" class="btn btn-primary pull-right" id='move_left' style="z-index: 200" />Remove</button>
+                    <h3 style="color: white">Selected Items:</h3>
+                    <input type='button' value='<<' id='move_left' />
                     <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
 
