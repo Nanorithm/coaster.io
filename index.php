@@ -24,7 +24,9 @@
     <title>coaster.io</title>
     
     <script>
-    
+	<?php
+    session_start();
+	?>
     </script>
 </head>
 
@@ -43,7 +45,8 @@
     
     <div id="nav-container">
     <?php
-if($logged_id){
+	$logged_id = 0;
+if($SESSION['token'] = $logged_id){
     include 'menu_authenticated.php';
 }
 else{

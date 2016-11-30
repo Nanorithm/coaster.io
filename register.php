@@ -19,6 +19,9 @@
 
     <script src="static/js/modal.js"></script>
 
+	<script>	<?php
+    session_start();
+	?> </script>
     <title>coaster.io | Registration</title>
 </head>
 <body>

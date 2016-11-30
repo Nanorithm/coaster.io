@@ -1,4 +1,5 @@
 <?php
+    session_start();
 $servername = "localhost";
 $username = "YOURUSER";
 $password = "user";
@@ -9,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $username = $_POST["username"];
 $password = $_POST["password"];
-$logged_id = 0;
+$logged_id = $_SESSION['token'];
 $url = 'http://localhost/coaster.io/index.php';
 
 // Check connection
