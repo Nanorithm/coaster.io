@@ -122,14 +122,14 @@ else{
                             <div class="bhoechie-tab-content">
                                 <center>
                                     <h1 class="glyphicon glyphicon-list-alt glyph-size" style="color:#55518a"></h1>
-                                    <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                                    <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
                                     <h3 style="margin-top: 0;color:#55518a">1. Ingredient 1</h3> </center>
                             </div>
                             <!-- hotel search -->
                             <div class="bhoechie-tab-content">
                                 <center>
                                     <h1 class="glyphicon glyphicon-pencil glyph-size" style="color:#55518a"></h1>
-                                    <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                                    <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
                                     <h3 style="margin-top: 0;color:#55518a"><span id = "mixedDrinkID"></span></h3> </center>
                             </div>
                         </div>
