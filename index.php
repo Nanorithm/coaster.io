@@ -24,13 +24,9 @@
     <title>coaster.io</title>
 
     <script>
-<<<<<<< HEAD
 	<?php
     session_start();
 	?>
-=======
-
->>>>>>> origin/master
     </script>
 </head>
 
@@ -50,13 +46,11 @@
 
     <div id="nav-container">
     <?php
-<<<<<<< HEAD
 	$logged_id = 0;
 if($SESSION['token'] = $logged_id){
-=======
         $logged_id = 0;
+}
 if($logged_id){
->>>>>>> origin/master
     include 'menu_authenticated.php';
 }
 else{
