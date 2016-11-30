@@ -49,7 +49,7 @@ if($logged_id){
    include 'menu_authenticated.php';
 }
 else{
-   include 'menu_unauthenticated.php';
+   include 'menu_authenticated.php';
 }
 ?>
     </div>
