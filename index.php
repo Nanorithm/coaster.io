@@ -43,6 +43,7 @@
     
     <div id="nav-container">
     <?php
+        $logged_id = 0;
 if($logged_id){
     include 'menu_authenticated.php';
 }
@@ -67,7 +68,7 @@ else{
                                 
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
                                 <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
-                                +</button>
+                                <span class="glyphicon glyphicon-plus"></span></button>
                                 <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
                             </div>
                         </div>
@@ -141,8 +142,8 @@ else{
             <!-- rightmost pane - holds selected items from left pane -->
             <div id="right" class="col-sm-4">
                 <div class="inner">
-                    <h3 style="color: white">Selected Items:</h3>
-                    <input type='button' value='<<' id='move_left' />
+                    <h2 style="color: white; text-align:center">Selected Items:</h2>
+                    <button type="button" class="btn btn-primary pull-right" id='move_left' style="z-index: 200" />Remove</button>
                     <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
 
