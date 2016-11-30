@@ -69,7 +69,7 @@ else{
 
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
                                 <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
-                                +</button>
+                                <span class="glyphicon glyphicon-plus"></span></button>
                                 <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
                             </div>
                         </div>
@@ -143,8 +143,8 @@ else{
             <!-- rightmost pane - holds selected items from left pane -->
             <div id="right" class="col-sm-4">
                 <div class="inner">
-                    <h3 style="color: white">Selected Items:</h3>
-                    <input type='button' value='<<' id='move_left' />
+                    <h3 style="color: white; text-align: center">Selected Items:</h3>
+                    <button type="button" class="btn btn-primary pull-right" id='move_left'>Remove</button>
                     <div class="list-group list2" data-toggle="items">
                         <!-- empty div for contents -->
 
