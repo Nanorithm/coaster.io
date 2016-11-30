@@ -415,16 +415,7 @@ else{
                 e.stopPropagation();
             });
         });
-        $(document).ready(function () {
-            $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
-                e.preventDefault();
-                $(this).siblings('a.active').removeClass("active");
-                $(this).addClass("active");
-                var index = $(this).index();
-                $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-                $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-            });
-        });
+
         $('#nav').affix({
             offset: {
                 top: $('header').height()
@@ -515,46 +506,20 @@ else{
 						var a=this.responseText;
 						a=a.split("|");
 						var strVar="";
-strVar += "<div >";
-strVar += "                        <div class=\"col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container\">";
-strVar += "                            <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu\">";
-strVar += "                                <div class=\"list-group\">";
-strVar += "                                    <a href=\"#\" class=\"list-group-item active text-center item-width\" onclick='return false;'>";
-strVar += "                                        <h4 class=\"glyphicon glyphicon-glass\"><\/h4>";
-strVar += "                                        <br\/>Drink <\/a>";
-strVar += "                                    <a href=\"#\" class=\"list-group-item text-center item-width\" onclick='return false;'>";
-strVar += "                                        <h4 class=\"glyphicon glyphicon-list-alt\"><\/h4>";
-strVar += "                                        <br\/>Ingredients <\/a>";
-strVar += "                                    <a href=\"#\" class=\"list-group-item text-center item-width\" onclick='return false;'>";
-strVar += "                                        <h4 class=\"glyphicon glyphicon-pencil\"><\/h4>";
-strVar += "                                        <br\/>Directions <\/a>";
-strVar += "                                <\/div>";
-strVar += "                            <\/div>";
-strVar += "                            <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab\">";
-strVar += "                                <!-- flight section -->";
-strVar += "                                <div class=\"bhoechie-tab-content active\">";
-strVar += "                                    <center>";
-strVar += "                                        <h1 class=\"glyphicon glyphicon-glass glyph-size\" style=\"color:#337ab7\"><\/h1>";
-strVar += "                                        <h2 style=\"margin-top: 0;color:#337ab7\">"+a[0]+"<\/h2>";
-strVar += "                                        <h3 style=\"margin-top: 0;color:#337ab7\"><\/h3> <\/center>";
-strVar += "                                <\/div>";
-strVar += "                                <!-- train section -->";
-strVar += "                                <div class=\"bhoechie-tab-content\">";
-strVar += "                                    <center>";
-strVar += "                                        <h1 class=\"glyphicon glyphicon-list-alt glyph-size\" style=\"color:#337ab7\"><\/h1>";
-strVar += "                                        <h2 style=\"margin-top: 0;color:#337ab7\">"+a[1]+", "+a[2]+", "+a[3]+"<\/h2>";
-strVar += "                                        <h3 style=\"margin-top: 0;color:#337ab7\"><\/h3> <\/center>";
-strVar += "                                <\/div>";
-strVar += "                                <!-- hotel search -->";
-strVar += "                                <div class=\"bhoechie-tab-content\">";
-strVar += "                                    <center>";
-strVar += "                                        <h1 class=\"glyphicon glyphicon-pencil glyph-size\" style=\"color:#337ab7\"><\/h1>";
-strVar += "                                        <h2 style=\"margin-top: 0;color:#337ab7\">"+a[4]+"<\/h2>";
-strVar += "                                        <h3 style=\"margin-top: 0;color:#337ab7\"><span id = \"mixedDrinkID\"><\/span><\/h3> <\/center>";
-strVar += "                                <\/div>";
-strVar += "                            <\/div>";
-strVar += "                        <\/div>";
-strVar += "                    <\/div>";
+strVar += "<div class=\"container\">";
+strVar += "<div class=\"card hovercard\">";
+strVar += "   <img src=\"http:\/\/placehold.it\/300x200\/000000\/&text=Header\" alt=\"\"\/>";
+strVar += "   <div class=\"info\">";
+strVar += "      <div class=\"title\">";
+strVar += a[0];
+strVar += "      <\/div>";
+strVar += "<p>Ingredients:<\/p>";
+strVar += "      <div class=\"desc\">"+a[1]+", "+a[2]+", "+a[3]+"<\/div>";
+strVar += "<p>Directions:<\/p>";
+strVar += "      <div class=\"desc\">"+a[4]+"<\/div>";
+strVar += "   <\/div>";
+strVar += "<\/div>";
+strVar += "<\/div>";
 						
 						div.append(strVar);
 						
