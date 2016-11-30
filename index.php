@@ -41,7 +41,16 @@
     <!-- nav bar -->
     
     
-    <div id="nav-container"></div>
+    <div id="nav-container">
+    <?php
+if($logged_id){
+    include 'menu_authenticated.php';
+}
+else{
+    include 'menu_unauthenticated.php';
+}
+?>
+    </div>
     
     
     <!-- nav bar -->
@@ -55,25 +64,12 @@
                         <input type="text" class="form-control" placeholder="Search...." id="search" />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group" style="color: red">
-                                <div class="dropdown dropdown-lg">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                                    <div class="dropdown-menu dropdown-menu-right" role="menu" style="z-index:2000">
-                                        <form class="form-horizontal" role="form">
-                                            <div class="form-group">
-                                                <label for="filter">Filter by</label>
-                                                <select class="form-control">
-                                                    <option value="0" selected>------</option>
-                                                    <option value="1">Liquor</option>
-                                                    <option value="2">Mixer</option>
-                                                    <option value="3">Garnish</option>
-                                                </select>
-                                            </div>
-                                            <!-- <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button> -->
-                                        </form>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button>
-                                <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> </div>
+                                
+                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
+                                <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
+                                +</button>
+                                <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
+                            </div>
                         </div>
                     </div>
                     <!-- Tyrone -->
