@@ -24,7 +24,7 @@ else {
 	$result = $conn->query($sql); // liquors
 	//$result2 = $conn->query($sql2); // mixers
 	//$result3 = $conn->query($sql3); // garnishes
-	echo "<div class='list-group list1' data-toggle='items'>";
+	echo "<div class='list-group list1' data-toggle='items' style='z-index: 1; position: relative'>";
 		
 	
 	// Liquors
@@ -39,7 +39,7 @@ else {
 	for ($i = 0; $i < $result->num_rows; ++$i) {
 		$jsonData=json_encode(array_values((array)$response[$i]));
 		
-		echo "<a href='#' class='list-group-item' onclick='return false;'>$jsonData</a>";
+		echo "<a href='#' class='list-group-item' onclick='return false;' style='z-index: 1 !important;'>$jsonData</a>";
 		
 	}
 	
