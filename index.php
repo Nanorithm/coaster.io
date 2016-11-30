@@ -33,7 +33,7 @@
         <div class="tint">
         <div class="container">
             <div id="color-overlay"> </div>
-            <div class="intro-text" style="z-index: 2">
+            <div class="intro-text" style="z-index: 1">
                 <div class="intro-heading">coaster.io</div>
                 <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
         </div>

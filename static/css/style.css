@@ -59,6 +59,7 @@ section {
 
 #exampleInputPassword2, #exampleInputEmail2 {
     background-color: #555555;
+    color: #ccc
 }
 
 .logcolor::-webkit-input-placeholder {
