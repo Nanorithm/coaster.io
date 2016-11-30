@@ -177,7 +177,7 @@ End Nav Bar -->
                                     </div>
                                 </div>
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button>
-                                <input type='button' value='>>' id='move_right' /> </div>
+                                <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> </div>
                         </div>
                     </div>
                     <!-- Tyrone -->
@@ -203,7 +203,8 @@ End Nav Bar -->
                         </div>
                     </div>
                 </div> <!-- / example card -->
-                    <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
+					<div id = "mixedDrinksDiv">
+						<div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
                             <div class="list-group">
                                 <a href="#" class="list-group-item active text-center item-width">
@@ -237,10 +238,11 @@ End Nav Bar -->
                                 <center>
                                     <h1 class="glyphicon glyphicon-pencil glyph-size" style="color:#55518a"></h1>
                                     <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
-                                    <h3 style="margin-top: 0;color:#55518a">1. Step 1</h3> </center>
+                                    <h3 style="margin-top: 0;color:#55518a"><span id = "mixedDrinkID"></span></h3> </center>
                             </div>
                         </div>
                     </div>
+					</div>
                 </div>
             </div>
             <!-- 3 -->
@@ -624,6 +626,20 @@ End Nav Bar -->
             };
             var search = document.getElementById("search").value;
             xmlhttp.open("GET", "testing/Database Testing/testDBh.php?search=" + search, true);
+            xmlhttp.send();
+        }
+		
+		function addMixedDrinks(id) {
+            var xmlhttp = new XMLHttpRequest();
+			
+			
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById(id).innerHTML = this.responseText;
+                }
+            };
+            var mixedDrinksDiv = document.getElementById("mixedDrinkID").value;
+            xmlhttp.open("GET", "testing/Database Testing/testDBi.php?search=" + mixedDrinksDiv, true);
             xmlhttp.send();
         }
 
