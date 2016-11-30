@@ -99,7 +99,7 @@
                                     <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
                                 </div>
                             </form>
-                            <form id="register-form" action="#" method="post" role="form" style="display: none;">
+                            <form id="register-form" action="testing/Database testing/testDBg.php" method="post" role="form" style="display: none;">
                                 <h2>REGISTER</h2>
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="required" value="" style="width: 100%">
