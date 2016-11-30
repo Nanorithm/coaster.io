@@ -506,7 +506,7 @@ else{
 						var a=this.responseText;
 						a=a.split("|");
 						var strVar="";
-strVar += "<div class=\"container\">";
+strVar += "<div class=\"container container-width\">";
 strVar += "<div class=\"card hovercard\">";
 strVar += "   <img src=\"http:\/\/placehold.it\/300x200\/000000\/&text=Header\" alt=\"\"\/>";
 strVar += "   <div class=\"info\">";
