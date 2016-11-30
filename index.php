@@ -22,39 +22,36 @@
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/listgroup.min.js"></script>
     <title>coaster.io</title>
-
     <script>
-
     </script>
 </head>
 
 <body>
     <header>
         <div class="tint">
-        <div class="container">
-            <div id="color-overlay"> </div>
-            <div class="intro-text" style="z-index: 2">
-                <div class="intro-heading">coaster.io</div>
-                <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
-        </div>
+            <div class="container">
+                <div id="color-overlay"> </div>
+                <div class="intro-text" style="z-index: 2">
+                    <div class="intro-heading">coaster.io</div>
+                    <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#left" class="page-scroll btn btn-xl">Tell Me More</a> </div>
+            </div>
         </div>
     </header>
-
     <!-- nav bar -->
-
-
     <div id="nav-container">
-    <?php
+        <?php
+$logged_id = 0;
+if($SESSION['token'] = $logged_id){
+       $logged_id = 0;
+}
 if($logged_id){
-    include 'menu_authenticated.php';
+   include 'menu_authenticated.php';
 }
 else{
-    include 'menu_unauthenticated.php';
+   include 'menu_unauthenticated.php';
 }
 ?>
     </div>
-
-
     <!-- nav bar -->
     <div class="container-fluid" id="main">
         <div id="panes" class="row row-grid">
@@ -66,10 +63,9 @@ else{
                         <input type="text" class="form-control" placeholder="Search...." id="search" />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group" style="color: red">
-
-                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button><br>
-                                <button type="button" class="btn btn-primary" id='move_right' onclick = "addMixedDrinks();">
-                                <span class="glyphicon glyphicon-plus"></span></button>
+                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true" onclick="display();"></span></button>
+                                <br>
+                                <button type="button" class="btn btn-primary" id='move_right' onclick="addMixedDrinks();"> <span class="glyphicon glyphicon-plus"></span></button>
                                 <!-- <input type='button' value='>>' id='move_right' onclick = "addMixedDrinks();"/> -->
                             </div>
                         </div>
@@ -97,46 +93,46 @@ else{
                         </div>
                     </div>
                 </div> <!-- / example card -->
-					<div id = "mixedDrinksDiv">
-						<div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item active text-center item-width">
-                                    <h4 class="glyphicon glyphicon-glass"></h4>
-                                    <br/>Drink </a>
-                                <a href="#" class="list-group-item text-center item-width">
-                                    <h4 class="glyphicon glyphicon-list-alt"></h4>
-                                    <br/>Ingredients </a>
-                                <a href="#" class="list-group-item text-center item-width">
-                                    <h4 class="glyphicon glyphicon-pencil"></h4>
-                                    <br/>Directions </a>
+                    <div id="mixedDrinksDiv">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active text-center item-width">
+                                        <h4 class="glyphicon glyphicon-glass"></h4>
+                                        <br/>Drink </a>
+                                    <a href="#" class="list-group-item text-center item-width">
+                                        <h4 class="glyphicon glyphicon-list-alt"></h4>
+                                        <br/>Ingredients </a>
+                                    <a href="#" class="list-group-item text-center item-width">
+                                        <h4 class="glyphicon glyphicon-pencil"></h4>
+                                        <br/>Directions </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
-                            <!-- flight section -->
-                            <div class="bhoechie-tab-content active">
-                                <center>
-                                    <h1 class="glyphicon glyphicon-glass glyph-size" style="color:#55518a"></h1>
-                                    <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
-                                    <h3 style="margin-top: 0;color:#55518a">Drink Name</h3> </center>
-                            </div>
-                            <!-- train section -->
-                            <div class="bhoechie-tab-content">
-                                <center>
-                                    <h1 class="glyphicon glyphicon-list-alt glyph-size" style="color:#55518a"></h1>
-                                    <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
-                                    <h3 style="margin-top: 0;color:#55518a">1. Ingredient 1</h3> </center>
-                            </div>
-                            <!-- hotel search -->
-                            <div class="bhoechie-tab-content">
-                                <center>
-                                    <h1 class="glyphicon glyphicon-pencil glyph-size" style="color:#55518a"></h1>
-                                    <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
-                                    <h3 style="margin-top: 0;color:#55518a"><span id = "mixedDrinkID"></span></h3> </center>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                                <!-- flight section -->
+                                <div class="bhoechie-tab-content active">
+                                    <center>
+                                        <h1 class="glyphicon glyphicon-glass glyph-size" style="color:#55518a"></h1>
+                                        <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
+                                        <h3 style="margin-top: 0;color:#55518a">Drink Name</h3> </center>
+                                </div>
+                                <!-- train section -->
+                                <div class="bhoechie-tab-content">
+                                    <center>
+                                        <h1 class="glyphicon glyphicon-list-alt glyph-size" style="color:#55518a"></h1>
+                                        <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
+                                        <h3 style="margin-top: 0;color:#55518a">1. Ingredient 1</h3> </center>
+                                </div>
+                                <!-- hotel search -->
+                                <div class="bhoechie-tab-content">
+                                    <center>
+                                        <h1 class="glyphicon glyphicon-pencil glyph-size" style="color:#55518a"></h1>
+                                        <h2 style="margin-top: 0;color:#55518a">Coming Soon</h2>
+                                        <h3 style="margin-top: 0;color:#55518a"><span id = "mixedDrinkID"></span></h3> </center>
+                                </div>
                             </div>
                         </div>
                     </div>
-					</div>
                 </div>
             </div>
             <!-- 3 -->
@@ -144,10 +140,9 @@ else{
             <div id="right" class="col-sm-4">
                 <div class="inner">
                     <h3 style="color: white; text-align: center">Selected Items:</h3>
-                    <button type="button" class="btn btn-primary pull-right" id='move_left'>Remove</button>
-                    <div class="list-group list2" data-toggle="items">
+                    <button type="button" class="btn btn-primary pull-right" id='move_left' style="z-index: 2">Remove</button><br><br><br>
+                    <div class="list-group list2" data-toggle="items" style="z-index: 3">
                         <!-- empty div for contents -->
-
                     </div>
                 </div>
             </div>
@@ -523,10 +518,8 @@ else{
             xmlhttp.send();
         }
 
-		function addMixedDrinks(id) {
+        function addMixedDrinks(id) {
             var xmlhttp = new XMLHttpRequest();
-
-
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById(id).innerHTML = this.responseText;
@@ -609,7 +602,6 @@ else{
             document.getElementById("vodkaImg").src = "liquor_images.php?id=6";
         }
         window.addEventListener("load", initialize, false);
-
         //for moving lists
         $('body').on('click', 'a', function () {
             $(this).toggleClass('active');
@@ -621,7 +613,6 @@ else{
             $('.list2').append($('.list1 .active').removeClass('active'));
         });
     </script>
-
     <script src="https://cdn.jsdelivr.net/bootstrap.listgroup/1.1.2/listgroup.min.js"></script>
 </body>
 
