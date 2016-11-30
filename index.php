@@ -31,6 +31,7 @@
         <div class="tint">
             <div class="container">
                 <div class="intro-text" style="z-index: 2">
+                    <img src="static/img/logo.png" width="300px">
                     <div class="intro-heading">coaster.io</div>
                     <div class="intro-lead-in">The last drink mixer you'll ever need</div> <a href="#main" class="page-scroll btn btn-xl">Tell Me More</a> <a href="#portfolio" class="scroll8 btn btn-xl">Our Drinks</a> </div>
             </div>
@@ -408,6 +409,7 @@ else{
     </div> -->
     <script>
 		var mixedDrinkArray=[];
+        var images=[];
 	
         $(document).ready(function () {
             //Handles menu drop down
@@ -497,6 +499,7 @@ else{
         }
 		
 		function createCards(array, iterations) {
+            var num=1;
 			var div=$( "#cards" );
 			div.empty();
 			for (var i=0; i<iterations; i++) {
@@ -506,9 +509,10 @@ else{
 						var a=this.responseText;
 						a=a.split("|");
 						var strVar="";
+                        var image="image"+num.toString();			
 strVar += "<div class=\"container container-width\">";
 strVar += "<div class=\"card hovercard\">";
-strVar += "   <img src=\"http:\/\/placehold.it\/300x200\/000000\/&text=Header\" alt=\"\"\/>";
+	strVar += "   <img id="+image+" alt=\"\"\/>";
 strVar += "   <div class=\"info\">";
 strVar += "      <div class=\"title\">";
 strVar += a[0];
@@ -520,8 +524,10 @@ strVar += "      <div class=\"desc\">"+a[4]+"<\/div>";
 strVar += "   <\/div>";
 strVar += "<\/div>";
 strVar += "<\/div>";
+                        num++;
 						
 						div.append(strVar);
+                        showPicture(image, iterations, array);
 						
 					}
 				};
@@ -529,6 +535,16 @@ strVar += "<\/div>";
 				xmlhttp.send();
 			}
 		}
+        
+        function showPicture(image, iterations, array) {		
+			images.push(image);		
+			if (images.length==iterations) {		
+				for (var j=0; j<iterations; j++) {		
+					document.getElementById(images[j]).src="mixeddrink_Image.php?id=" + array[j];		
+				}		
+			}		
+		}
+        
         function pullMixedDrinkImagesforModal(id, modal) {
             var xmlhttp = new XMLHttpRequest();
             var a = "";
